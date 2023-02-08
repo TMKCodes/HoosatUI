@@ -9,6 +9,7 @@ import { Modal, ModalBody, ModalFooter, ModalHeader } from "./Modal";
 import { Select } from "./Select/Select";
 import { Table } from "./Table/Table";
 
+import './index.css';
 
 export {
   Button,
