@@ -3,6 +3,7 @@ import { Checkbox } from "./Checkbox/Checkbox";
 import { Combobox } from "./Combobox/Combobox";
 import { Form } from "./Form/Form";
 import { Input } from "./Input/Input";
+import { InputList } from "./InputList/InputList";
 import { Message } from "./Message/Message";
 import { Modal, ModalBody, ModalFooter, ModalHeader } from "./Modal";
 import { Select } from "./Select/Select";
@@ -15,6 +16,7 @@ export {
   Combobox,
   Form,
   Input,
+  InputList,
   Message,
   Modal,
   ModalBody,

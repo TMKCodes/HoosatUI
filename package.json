@@ -1,6 +1,6 @@
 {
-  "name": "@TMKCodes/HoosatUI",
-  "version": "1.0.0",
+  "name": "@tonto/hoosatui",
+  "version": "1.0.1",
   "description": "React + Tailwind UI Components",
   "main": "./lib/cjs/index.js",
   "module": "./lib/esm/index.js",
