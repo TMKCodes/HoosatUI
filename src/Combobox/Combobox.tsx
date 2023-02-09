@@ -47,8 +47,9 @@ export const Combobox: React.FC<ComboboxType> = (data) => {
     }
     setResult(tmpResult);
     if(data.onSelect !== undefined) {
-      e.target.value = tmpResult;
-      data.onSelect(e)
+      data.onSelect({ ...e, target: { value: tmpResult[0] } } )
+    } else {
+      console.log("data.onSelect === undefined");
     }
   };
 
