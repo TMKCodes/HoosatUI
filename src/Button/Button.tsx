@@ -21,14 +21,14 @@ export const Button: React.FC<ButtonType> = (data) => {
   const defaultClasses = "py-3 px-4 w-full block leading-5 rounded-md transition duration-150 ease-in-out bg-slate-300 hover:bg-slate-400 border border-gray-300 placeholder-gray-500 focus:outline-none focus:shadow-outline-blue focus:border-slate-500 sm:text-sm sm:leading-5";
   
   return (
-    <button data-testid={data.testid}
-      id={(data !== undefined && data.id !== undefined) ? data.id : "" }
-      type={(data !== undefined && data.type !== undefined) ? data.type : "button" }
-      className={ getClassName(data.className, defaultClasses) }
-      onClick={(e) => {
-        (data.onClick !== undefined ) && data.onClick(e) 
-      }}>
-      {(data !== undefined && data.text !== undefined) ? data.text : (data.children !== undefined) ? data.children : "Button" }
+    <button 
+        {...data} 
+        id={(data.id !== undefined) ? data.id : "" } 
+        data-testid={(data.id !== undefined) ? data.id : "" }
+        type={(data.type !== undefined) ? data.type : "button" }
+        className={ getClassName(data.className, defaultClasses) }
+      >
+      {(data.value !== undefined) ? data.value : (data.children !== undefined) ? data.children : "Button" }
     </button>
   );
 };

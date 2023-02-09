@@ -1,8 +1,8 @@
 import React from "react";
-import { NotificationType } from "../@types";
+import { MessageType } from "../@types";
 import { getClassName } from "../Common/ClassNameHandler";
 
-export const Message: React.FC<NotificationType> = (data) => {
+export const Message: React.FC<MessageType> = (data) => {
   let defaultClasses = "border p-4 rounded text-center";
   if(data.type === "error") {
     defaultClasses += " bg-red-600 text-white";

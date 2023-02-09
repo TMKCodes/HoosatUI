@@ -19,7 +19,7 @@ describe('Button component', () => {
     const data: ButtonType = {
       id: 'my-button',
       type: 'submit',
-      text: 'Click me',
+      value: 'Click me',
       className: 'custom-class',
       onClick: jest.fn()
     };
@@ -37,7 +37,7 @@ describe('Button component', () => {
     const data: ButtonType = {
       id: 'my-button',
       type: 'submit',
-      text: 'Click me',
+      value: 'Click me',
       className: 'custom-class',
       onClick: jest.fn()
     };

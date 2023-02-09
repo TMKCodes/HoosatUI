@@ -16,7 +16,7 @@ export const ModalHeader: React.FC<ModalHeaderType> = (data) => {
       <h5 className={ getClassNames("header", data.className, defaultClasses)}>
         {(data.header !== undefined) && data.header}
       </h5>
-      <Button type="button" text="x" onClick={() => { (data.onClose !== undefined) && data.onClose() }} className={ getClassNames("closeButton", data.className, defaultClasses) }/>
+      <Button type="button" value="x" onClick={data.onClick} className={ getClassNames("closeButton", data.className, defaultClasses) }/>
       {(data.children !== undefined) && data.children}
     </div>
   );

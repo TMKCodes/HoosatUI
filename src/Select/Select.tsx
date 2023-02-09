@@ -18,7 +18,7 @@ export const Select: React.FC<SelectType> = (data) => {
         id={data.id} 
         name={data.name} 
         className={ getClassNames("select", data.className, defaultClasses) }
-        onChange={(e) => data.onChange(e) }
+        onChange={data.onChange}
         multiple={(data.multiple !== undefined) ? data.multiple : false}>
         { (data.options?.map((option) => (
           <option key={option} value={option}>{option}</option>

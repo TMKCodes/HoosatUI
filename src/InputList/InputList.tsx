@@ -14,7 +14,7 @@ export const InputList: React.FC<InputListType> = (data) => {
           type={input.type}
           placeholder={input.placeholder}
           value={input.value}
-          onChange={(e) => input.onChange(e)}/>
+          onChange={input.onChange}/>
       ))}
     </>
   );

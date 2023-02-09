@@ -16,13 +16,15 @@ export const Input: React.FC<InputType> = (data) => {
         { (data !== undefined && data.label !== undefined) ? data.label : "" }
       </label>
       <input
+        {...data}
+        step={"on"}
         id={ (data !== undefined && data.id !== undefined) ? data.id : "" }
         data-testid={ (data !== undefined && data.id !== undefined) ? data.id + "-input" : "" }
         className={ getClassNames("input", data.className, defaultClasses) }
         type={ (data !== undefined && data.type !== undefined) ? data.type : "" }
         placeholder={ (data !== undefined && data.placeholder !== undefined) ? data.placeholder : "" }
         value={ (data !== undefined && data.value !== undefined) ? data.value : "" }
-        onChange={(e) => data.onChange(e)}
+        onChange={data.onChange}
       />
     </>
   );

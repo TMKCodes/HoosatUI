@@ -6,8 +6,8 @@ import { ModalHeader } from './ModalHeader';
 describe('ModalHeader component', () => {
   it('renders the header text and close button', () => {
     const headerText = 'Modal Header';
-    const onClose = jest.fn();
-    const { getByText } = render(<ModalHeader header={headerText} onClose={onClose} />);
+    const onClick = jest.fn();
+    const { getByText } = render(<ModalHeader header={headerText} onClick={onClick} />);
 
     const headerElement = getByText(headerText);
     expect(headerElement).toBeInTheDocument();
@@ -16,14 +16,14 @@ describe('ModalHeader component', () => {
     expect(closeButton).toBeInTheDocument();
 
     fireEvent.click(closeButton);
-    expect(onClose).toHaveBeenCalled();
+    expect(onClick).toHaveBeenCalled();
   });
 
   it('renders children components', () => {
     const headerText = 'Modal Header';
-    const onClose = jest.fn();
+    const onClick = jest.fn();
     const children = <p>Modal Header Children</p>;
-    const { getByText } = render(<ModalHeader header={headerText} onClose={onClose}>{children}</ModalHeader>);
+    const { getByText } = render(<ModalHeader header={headerText} onClick={onClick}>{children}</ModalHeader>);
 
     const headerElement = getByText(headerText);
     expect(headerElement).toBeInTheDocument();
@@ -35,13 +35,13 @@ describe('ModalHeader component', () => {
     expect(childrenElement).toBeInTheDocument();
 
     fireEvent.click(closeButton);
-    expect(onClose).toHaveBeenCalled();
+    expect(onClick).toHaveBeenCalled();
   });
 
   it('renders default class names', () => {
     const headerText = 'Modal Header';
-    const onClose = jest.fn();
-    const { container } = render(<ModalHeader header={headerText} onClose={onClose} />);
+    const onClick = jest.fn();
+    const { container } = render(<ModalHeader header={headerText} onClick={onClick} />);
 
     expect(container.firstChild).toHaveClass('flex flex-shrink-0 items-center justify-between p-4 border-b border-gray-200 rounded-t-md');
     expect(container.querySelector('h5')).toHaveClass('text-xl font-medium leading-normal text-gray-800');
@@ -55,26 +55,26 @@ describe('ModalHeader component', () => {
       header: 'custom-header',
       closeButton: 'custom-close-button',
     };
-    const { getByText, container } = render(<ModalHeader header={headerText} onClose={() => {}} className={className} />);
+    const { getByText, container } = render(<ModalHeader header={headerText} onClick={() => {}} className={className} />);
     expect(getByText(headerText)).toBeInTheDocument();
     expect(container.firstChild).toHaveClass(className.container);
     expect(getByText(headerText)).toHaveClass(className.header);
     expect(getByText('x')).toHaveClass(className.closeButton);
   });
 
-  it('calls onClose function when close button is clicked', () => {
+  it('calls onClick function when close button is clicked', () => {
     const header = 'Test header';
-    const onClose = jest.fn();
-    const { getByText } = render(<ModalHeader header={header} onClose={onClose} />);
+    const onClick = jest.fn();
+    const { getByText } = render(<ModalHeader header={header} onClick={onClick} />);
     const closeButton = getByText('x');
     closeButton.click();
-    expect(onClose).toHaveBeenCalled();
+    expect(onClick).toHaveBeenCalled();
   });
 
   it('renders children if passed', () => {
     const header = 'Test header';
     const children = <div>Test children</div>;
-    const { getByText } = render(<ModalHeader header={header} onClose={() => {}}>{children}</ModalHeader>);
+    const { getByText } = render(<ModalHeader header={header} onClick={() => {}}>{children}</ModalHeader>);
     expect(getByText('Test children')).toBeInTheDocument();
   });
 });

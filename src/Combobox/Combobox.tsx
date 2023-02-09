@@ -30,7 +30,7 @@ export const Combobox: React.FC<ComboboxType> = (data) => {
     }
   }
 
-  const handleOptionClick = (option: string) => {
+  const handleOptionClick = (e: React.BaseSyntheticEvent, option: string) => {
     setShowResults(false);
     let tmpResult: string[] = [...result];
     if(data.multiple === false) {
@@ -47,7 +47,8 @@ export const Combobox: React.FC<ComboboxType> = (data) => {
     }
     setResult(tmpResult);
     if(data.onSelect !== undefined) {
-      data.onSelect(tmpResult)
+      e.target.value = tmpResult;
+      data.onSelect(e)
     }
   };
 
@@ -90,7 +91,7 @@ export const Combobox: React.FC<ComboboxType> = (data) => {
               return (result.includes(option)) 
                 ? <li key={index} // Already selected
                     className={ getClassNames("option", data.className, defaultClasses)}
-                    onClick={() => handleOptionClick(option)}>
+                    onClick={(e: React.BaseSyntheticEvent) => handleOptionClick(e, option)}>
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 inline-block pr-2">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
                       </svg>
@@ -98,7 +99,7 @@ export const Combobox: React.FC<ComboboxType> = (data) => {
                   </li>
                 : <li key={index}
                     className={ getClassNames("option", data.className, defaultClasses) }
-                    onClick={() => handleOptionClick(option)}>
+                    onClick={(e: React.BaseSyntheticEvent) => handleOptionClick(e, option)}>
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 inline-block pr-2">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 10.5V6.75a4.5 4.5 0 119 0v3.75M3.75 21.75h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H3.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
                       </svg>
