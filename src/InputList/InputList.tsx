@@ -7,7 +7,7 @@ export const InputList: React.FC<InputListType> = (data) => {
   return (
     <>
       { (data.inputs !== undefined) && data.inputs.map((input) => (
-        <Input key={(input.id !== undefined) ? input.id + Date.now().toLocaleString() : Date.now().toLocaleString() }
+        <Input key={input.id}
           id={input.id}
           className={input.className}
           label={input.label} 
