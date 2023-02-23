@@ -1,8 +1,11 @@
 import React, { DetailedHTMLProps, HTMLAttributes } from 'react';
 
+import './Heading.scss';
+
 interface HeadingProps extends DetailedHTMLProps<HTMLAttributes<HTMLHeadingElement>, HTMLHeadingElement> {
   variant?: string;
 }
+
 
 export const Heading: React.FC<HeadingProps> = ({
   children,

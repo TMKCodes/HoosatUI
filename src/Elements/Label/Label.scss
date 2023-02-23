@@ -15,30 +15,7 @@ $active-color: #1A202C;
   line-height: 1.5rem;
   border-radius: 0.375rem;
   transition: all 150ms ease-in-out;
-
-  &.h1 {
-    font-size: 1.75rem;
-  }
-
-  &.h2 {
-    font-size: 1.50rem;
-  }
-
-  &.h3 {
-    font-size: 1.25rem;
-  }
-
-  &.h4 {
-    font-size: 1rem;
-  }
-
-  &.h5 {
-    font-size: 0.75rem;
-  }
-
-  &.h6 {
-    font-size: 0.5rem;
-  }
+  cursor: pointer;
 
   &.primary {
     background-color: $primary-color;
