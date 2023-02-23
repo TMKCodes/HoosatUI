@@ -11,6 +11,6 @@ export const Paragraph: React.FC<ParagraphProps> = ({
   ...rest
 }) => {
   return (
-    <p {...rest}>{children}</p>
+    <p {...rest} className={`Paragraph ${rest.className}`}>{children}</p>
   );
 }
