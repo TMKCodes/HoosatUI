@@ -11,6 +11,6 @@ export const Label: React.FC<LabelProps> = ({
   ...rest
 }) => {
   return (
-    <label {...rest}>{children}</label>
+    <label {...rest} className={`label ${rest.className}`}>{children}</label>
   );
 }
