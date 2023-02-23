@@ -24,7 +24,7 @@ export const Input: React.FC<InputType> = (data) => {
         type={ (data !== undefined && data.type !== undefined) ? data.type : "" }
         placeholder={ (data !== undefined && data.placeholder !== undefined) ? data.placeholder : "" }
         value={ (data !== undefined && data.value !== undefined) ? data.value : "" }
-        onChange={data.onChange}
+        onChange={(e: React.BaseSyntheticEvent) => { (data.onChange !== undefined) && data.onChange(e) }}
       />
     </>
   );

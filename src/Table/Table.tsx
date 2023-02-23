@@ -7,11 +7,11 @@ export const Table: React.FC<TableType> = (data) => {
 
   const defaultClasses: ClassNamesType = {
     table: "block table-auto overflow-auto overflow-x-scroll w-full max-w-full",
-    tHead: "w-full",
-    tHeadTr: "w-full",
+    tHead: "max-w-full",
+    tHeadTr: "max-w-full",
     tHeadTh: "px-1 border border-black w-1/6",
-    tBody: "",
-    tBodyTr: "",
+    tBody: "max-w-full",
+    tBodyTr: "max-w-full",
     tBodyTrSelected: "bg-white",
     tBodyTd: "px-1 border border-black"
   }
@@ -25,7 +25,7 @@ export const Table: React.FC<TableType> = (data) => {
           ))}
         </tr>
       </thead>
-      <tbody>
+      <tbody className={ getClassNames("tBody", data.className, defaultClasses) }>
         { (data.rows !== undefined) && data.rows.map((row) => (
           <tr key={"tr-" + String(row._id)} className={ (row.selected === true) ? getClassNames("tBodyTrSelected", data.className, defaultClasses) : getClassNames("tBodyTr", data.className, defaultClasses) }>
             { (row.data !== undefined) && Object.entries(row.data).map((entry)=> {
