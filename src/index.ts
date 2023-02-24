@@ -9,7 +9,20 @@ import { Modal, ModalBody, ModalFooter, ModalHeader } from "./Modal";
 import { Select } from "./Select/Select";
 import { Table } from "./Table/Table";
 
-import { Button as ElementsButton, Input as ElementsInput, Heading as ElementsHeading } from './Elements';
+import { 
+  Anchor as ElementsAnchor,
+  Area as ElementsArea,
+  Button as ElementsButton, 
+  Flex as ElementsFlex,
+  Heading as ElementsHeading,
+  Image as ElementsImage,
+  ImageMap as ElementsImageMap,
+  Input as ElementsInput, 
+  Label as ElementsLabel,
+  List as ElementsList,
+  ListItem as ElementsListItem,
+  Paragraph as ElementsParagraph,
+} from './Elements';
 
 import './index.css';
 
@@ -27,7 +40,16 @@ export {
   ModalHeader,
   Select,
   Table,
+  ElementsAnchor,
+  ElementsArea,
   ElementsButton,
+  ElementsFlex,
   ElementsInput,
   ElementsHeading,
+  ElementsImage,
+  ElementsImageMap,
+  ElementsLabel,
+  ElementsList,
+  ElementsListItem,
+  ElementsParagraph
 }

@@ -22,9 +22,9 @@ export const Input: React.FC<InputProps> = ({
         </label>
       }
       <input
+        {...rest}
         id={(rest.id !== undefined) ? rest.id : rest.label }
         className={`Input ${variant} ${rest.className}`}
-        {...rest}
         >
         {children}
       </input>

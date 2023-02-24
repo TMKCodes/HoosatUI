@@ -12,9 +12,9 @@ export const Button: React.FC<ButtonProps> = ({
 }) => {
   return (
     <button
+      {...rest}
       className={`Button ${variant} ${rest.className}`}
       type="button"
-      {...rest}
     >
       {children}
     </button>
