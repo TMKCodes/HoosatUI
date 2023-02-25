@@ -1,5 +1,6 @@
 $primary-color: #4A5568;
 $secondary-color: #CBD5E0;
+$border-color: #c9c8c8;
 $focus-color: rgba(66, 153, 225, 0.5);
 $active-color: #1A202C;
 
@@ -19,4 +20,25 @@ $active-color: #1A202C;
   row-gap: normal;
   column-gap: normal;
   
+}
+
+.FlexItem {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  order: 0;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: auto;
+  justify-content: flex-start;
+  align-self: auto;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: normal;
+  row-gap: normal;
+  column-gap: normal;
+  
+  & > * {
+    display: block;
+  }
 }

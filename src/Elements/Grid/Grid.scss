@@ -1,0 +1,24 @@
+$primary-color: #4A5568;
+$secondary-color: #CBD5E0;
+$border-color: #c9c8c8;
+$focus-color: rgba(66, 153, 225, 0.5);
+$active-color: #1A202C;
+
+.Grid {
+  display: grid;
+  gap: 1rem;
+  justify-content: space-evenly;
+  align-content: space-evenly;
+  grid-auto-flow: dense;
+  grid-template-areas: none;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+}
+
+.GridItem {
+  grid-column-start: auto;
+  grid-column-end: auto;
+  grid-row-start: auto;
+  grid-row-start: auto;
+  grid-area: auto;
+}

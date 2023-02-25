@@ -1,0 +1,39 @@
+$primary-color: #4A5568;
+$secondary-color: #CBD5E0;
+$border-color: #c9c8c8;
+$focus-color: rgba(66, 153, 225, 0.5);
+$active-color: #1A202C;
+
+.Table {
+  margin: 0;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+.THead {
+  margin: 0;
+  width: 100%;
+  height: auto;
+}
+
+.TBody {
+  margin: 0;
+  width: 100%;
+  height: auto;
+}
+
+.Tr {
+  margin: 0;
+  width: 100%;
+  height: auto;
+}
+
+.Th, .Td {
+  margin: 0;
+  width: auto;
+  height: auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+}

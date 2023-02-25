@@ -1,9 +1,12 @@
-import React, { OlHTMLAttributes } from 'react';
+import React, { OlHTMLAttributes, LiHTMLAttributes } from 'react';
 
 import './List.scss';
 
-interface ListProps extends OlHTMLAttributes<HTMLOListElement>{
+interface ListProps extends OlHTMLAttributes<HTMLOListElement> {
   marker?: string
+}
+interface ListItemProps extends LiHTMLAttributes<HTMLLIElement> {
+
 }
 
 export const List: React.FC<ListProps> = ({
@@ -18,5 +21,14 @@ export const List: React.FC<ListProps> = ({
         : <ul {...rest} className={`List ${rest.className}`}>{ children }</ul>
       }
     </>
+  );
+}
+
+export const ListItem: React.FC<ListItemProps> = ({
+  children,
+  ...rest
+}) => {
+  return (
+    <li {...rest} className={`ListItem ${rest.className}`}>{ children }</li>
   );
 }

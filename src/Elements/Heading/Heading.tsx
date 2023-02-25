@@ -1,8 +1,8 @@
-import React, { DetailedHTMLProps, HTMLAttributes } from 'react';
+import React, { HTMLAttributes } from 'react';
 
 import './Heading.scss';
 
-interface HeadingProps extends DetailedHTMLProps<HTMLAttributes<HTMLHeadingElement>, HTMLHeadingElement> {
+interface HeadingProps extends HTMLAttributes<HTMLHeadingElement> {
   variant?: string;
 }
 
