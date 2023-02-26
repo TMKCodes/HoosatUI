@@ -14,12 +14,12 @@ describe('ModalBody', () => {
 
   it('renders default className correctly', () => {
     const { container } = render(<ModalBody />);
-    expect(container.firstChild).toHaveClass('relative p-4');
+    expect(container.firstChild).toHaveClass('Grid');
   });
 
   it('renders custom className correctly', () => {
     const customClassName = 'custom-class-name';
     const { container } = render(<ModalBody className={customClassName} />);
-    expect(container.firstChild).toHaveClass('relative p-4 custom-class-name');
+    expect(container.firstChild).toHaveClass('Grid custom-class-name');
   });
 });

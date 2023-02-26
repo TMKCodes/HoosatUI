@@ -29,7 +29,7 @@ export const Image: React.FC<ImageProps> = ({
   ...rest
 }) => {
   return (
-    <img {...rest} className={`Image ${rest.className}`} alt={(rest.alt !== undefined) ? 'alt missing, not erroring' : rest.alt}/>
+    <img {...rest} className={`Image ${rest.className}`} alt={(rest.alt !== undefined) ? rest.alt : 'alt missing, not erroring'}/>
   );
 }
 

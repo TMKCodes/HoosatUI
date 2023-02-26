@@ -83,17 +83,17 @@ export const Combobox: React.FC<ComboboxProps> = (data) => {
   } 
 
   return (
-    <div className="Container">
-      <Input className="InputOverwrite" 
+    <div className="Container" data-testid="combobox-container">
+      <Input className="InputOverwrite"
         label={ (data !== undefined && data.label !== undefined) ? data.label : "" } 
-        data-testid="Combobox-input" id={(data !== undefined && data.id !== undefined) ? data.id : ""}
+        data-testid="combobox-input" id={(data !== undefined && data.id !== undefined) ? data.id : ""}
         type="text"
         value={searchText}
         onClick={handleClick}
         onChange={handleInput}>
       </Input>
       {showResults && (
-        <Grid className="OptionContainer">
+        <Grid className="OptionContainer" data-testid="combobox-option-container">
           <List marker="none" style={{ padding: "0px"}}>
             {filteredOptions().map((option, index) => {
               return (result.includes(option)) 
