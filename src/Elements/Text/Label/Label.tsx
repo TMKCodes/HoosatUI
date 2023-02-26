@@ -1,11 +1,20 @@
 import React, { LabelHTMLAttributes } from 'react';
-
 import './Label.scss';
 
+/**
+ * A styled Label tag component.
+ * @typedef {Object} LabelProps - Props for the Label component
+ * @extends HTMLAttributes<HTMLLabelElement>
+ */
 interface LabelProps extends LabelHTMLAttributes<HTMLLabelElement> {
 
 }
 
+/**
+ * Label component
+ * @param {LabelProps} props - Props for the Label component
+ * @returns {React.ReactElement} - Rendered Label component
+ */
 export const Label: React.FC<LabelProps> = ({
   children,
   ...rest

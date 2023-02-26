@@ -3,7 +3,16 @@ import { Grid, Input, List, ListItem } from "../..";
 
 import './Combobox.scss';
 
-interface ComboboxType extends InputHTMLAttributes<HTMLInputElement> {
+/**
+ * @typedef {Object} ComboboxProps - Props for Combobox component
+ * @property {string} [label] - Label for the input field
+ * @property {string[]} options - List of options to display in the dropdown
+ * @property {boolean} [multiple] - Whether the user can select multiple options
+ * @property {boolean} [search] - Whether the user can search/filter the options
+ * @extends InputHTMLAttributes<HTMLInputElement>
+ */
+
+interface ComboboxProps extends InputHTMLAttributes<HTMLInputElement> {
   // Own attributes
   label?: string,
   options: string[],
@@ -11,7 +20,12 @@ interface ComboboxType extends InputHTMLAttributes<HTMLInputElement> {
   search?: boolean,
 }
 
-export const Combobox: React.FC<ComboboxType> = (data) => {
+/**
+ * Combobox component renders a Combobox input field
+ * @param {ComboboxProps} data - Props for Combobox component
+ * @returns {JSX.Element} Combobox component
+ */
+export const Combobox: React.FC<ComboboxProps> = (data) => {
 
   const [searchText, setSearchText] = useState('');
   const [result, setResult] = useState<string[]>([]);
@@ -33,45 +47,40 @@ export const Combobox: React.FC<ComboboxType> = (data) => {
   const handleOptionClick = (e: React.BaseSyntheticEvent, option: string) => {
     setShowResults(false);
     let tmpResult: string[] = [...result];
-    if(data.multiple === false) {
+    if (data.multiple === false) {
       tmpResult = [option];
-      setSearchText(tmpResult.join(""));
+      setSearchText(tmpResult[0]);
     } else {
-      if(tmpResult.includes(option)) {
-        tmpResult = tmpResult.filter(value => value !== option);
+      if (tmpResult.includes(option)) {
+        tmpResult = tmpResult.filter((value) => value !== option);
       } else {
         tmpResult.push(option);
       }
-      console.log(tmpResult);
       setSearchText(tmpResult.join(", "));
     }
     setResult(tmpResult);
-    if(data.onSelect !== undefined) {
+    if (data.onSelect !== undefined) {
       data.onSelect({ ...e, target: { value: tmpResult[0] }} as React.ChangeEvent<HTMLInputElement>)
     } else {
       console.log("data.onSelect === undefined");
-    }
-  };
+    }  
+  }; 
 
   const filteredOptions = () => {
-    if(data.search === true) {
-      if(data.multiple === false) {
-        return data.options.filter((option) => option.toLowerCase().indexOf(searchText.toLowerCase()) !== -1)
-      } else {
-        let tmpSearchText = searchText.split(", ");
-        let result: string[] = [];
-        tmpSearchText.forEach((text) => {
-          let matched = data.options.filter((option) => option.toLowerCase().indexOf(text.toLowerCase()) !== -1);
-          result = [...result, ...matched];
-          console.log(result);
-        })
-        result = result.filter((element, index) => result.indexOf(element) === index);
-        console.log(result);
-        return result;
-      }
+    if (!data.search) return data.options;
+    if (data.multiple) {
+      const tmpSearchText = searchText.split(", ");
+      let result: string[] = [];
+      tmpSearchText.forEach((text) => {
+        const matched = data.options.filter((option) => option.toLowerCase().indexOf(text.toLowerCase()) !== -1);
+        result = [...result, ...matched];
+      });
+      result = result.filter((element, index) => result.indexOf(element) === index);
+      return result;
+    } else {
+      return data.options.filter((option) => option.toLowerCase().indexOf(searchText.toLowerCase()) !== -1);
     }
-    return data.options;
-  }
+  } 
 
   return (
     <div className="Container">

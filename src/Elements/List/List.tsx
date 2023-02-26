@@ -2,13 +2,30 @@ import React, { OlHTMLAttributes, LiHTMLAttributes } from 'react';
 
 import './List.scss';
 
+/**
+ * A styled List tag component.
+ * @typedef {Object} ListProps - Props for the List component
+ * @param {string} [props.marker] - Variant of the List element, either 'ul', 'ol' or 'none'.
+ * @extends OlHTMLAttributes<HTMLOListElement>
+ */
 interface ListProps extends OlHTMLAttributes<HTMLOListElement> {
   marker?: string
 }
+
+/**
+ * A styled ListItem tag component.
+ * @typedef {Object} ListItemProps - Props for the ListItem component
+ * @extends LiHTMLAttributes<HTMLLIElement>
+ */
 interface ListItemProps extends LiHTMLAttributes<HTMLLIElement> {
 
 }
 
+/**
+ * List component
+ * @param {ListProps} props - Props for the List component
+ * @returns {React.ReactElement} - Rendered List component
+ */
 export const List: React.FC<ListProps> = ({
   children,
   marker,
@@ -26,6 +43,11 @@ export const List: React.FC<ListProps> = ({
   );
 }
 
+/**
+ * ListItem component
+ * @param {ListItemProps} props - Props for the ListItem component
+ * @returns {React.ReactElement} - Rendered ListItem component
+ */
 export const ListItem: React.FC<ListItemProps> = ({
   children,
   ...rest

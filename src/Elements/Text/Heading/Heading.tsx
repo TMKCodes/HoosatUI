@@ -1,12 +1,21 @@
 import React, { HTMLAttributes } from 'react';
-
 import './Heading.scss';
 
+/**
+ * A styled Heading tag component.
+ * @typedef {Object} HeadingProps - Props for the Heading component
+ * @param {string} [props.variant="h1"] - The heading variant (h1, h2, h3, h4, h5 or h6).
+ * @extends HTMLAttributes<HTMLHeadingElement>
+ */
 interface HeadingProps extends HTMLAttributes<HTMLHeadingElement> {
   variant?: string;
 }
 
-
+/**
+ * Heading component
+ * @param {HeadingProps} props - Props for the Heading component
+ * @returns {React.ReactElement} - Rendered Heading component
+ */
 export const Heading: React.FC<HeadingProps> = ({
   children,
   variant = 'h1',

@@ -1,15 +1,27 @@
 import React, { HTMLAttributes } from 'react';
-
 import './Flex.scss';
 
-interface FlexProps extends HTMLAttributes<HTMLDivElement>{
+/**
+ * @typedef {Object} FlexProps - Props for the Flex component
+ * @extends HTMLAttributes<HTMLDivElement>
+ */
+interface FlexProps extends HTMLAttributes<HTMLDivElement> {
 
 }
 
-interface FlexItemProps extends HTMLAttributes<HTMLDivElement>{
+/**
+ * @typedef {Object} FlexItemProps - Props for the FlexItem component
+ * @extends HTMLAttributes<HTMLDivElement>
+ */
+interface FlexItemProps extends HTMLAttributes<HTMLDivElement> {
 
 }
 
+/**
+ * Flex component
+ * @param {FlexProps} props - Props for the Flex component
+ * @returns {React.ReactElement} - Rendered Flex component
+ */
 export const Flex: React.FC<FlexProps> = ({
   children,
   ...rest
@@ -19,6 +31,11 @@ export const Flex: React.FC<FlexProps> = ({
   );
 }
 
+/**
+ * FlexItem component
+ * @param {FlexItemProps} props - Props for the FlexItem component
+ * @returns {React.ReactElement} - Rendered FlexItem component
+ */
 export const FlexItem: React.FC<FlexItemProps> = ({
   children,
   ...rest
