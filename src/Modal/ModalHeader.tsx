@@ -1,6 +1,6 @@
 import React from 'react';
 import { ClassNamesType, ModalHeaderType } from '../@types';
-import { Button } from '../Elements/Button/Button';
+import { Button } from '../Elements/Form/Button/Button';
 import { getClassNames } from '../Common/ClassNameHandler';
 
 
@@ -16,7 +16,7 @@ export const ModalHeader: React.FC<ModalHeaderType> = (data) => {
       <h5 className={ getClassNames("header", data.className, defaultClasses)}>
         {(data.header !== undefined) && data.header}
       </h5>
-      <Button type="button" onClick={data.onClick} className={ getClassNames("closeButton", data.className, defaultClasses) }>x</Button>
+      <Button type="button" onClick={data.onClick}>x</Button>
       {(data.children !== undefined) && data.children}
     </div>
   );

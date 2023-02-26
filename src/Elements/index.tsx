@@ -1,21 +1,24 @@
 import { Anchor } from './Anchor/Anchor';
-import { Area } from './Area/Area';
-import { Audio } from './Audio/Audio';
-import { Button } from './Button/Button';
+import { Area } from './Media/Area/Area';
+import { Audio } from './Media/Audio/Audio';
+import { Button } from './Form/Button/Button';
 import { Flex } from './Flex/Flex';
 import { FlexItem } from './Flex/Flex';
 import { Grid, GridItem } from './Grid/Grid';
-import { Heading } from './Heading/Heading';
-import { Image } from './Image/Image';
-import { ImageMap } from './ImageMap/ImageMap';
-import { Input } from './Input/Input';
-import { Label } from './Label/Label';
+import { Heading } from './Text/Heading/Heading';
+import { Image } from './Media/Image/Image';
+import { ImageMap } from './Media/Image/Image';
+import { Input } from './Form/Input/Input';
+import { Label } from './Text/Label/Label';
 import { List } from './List/List';
 import { ListItem } from './List/List';
-import { Paragraph } from './Paragraph/Paragraph';
-import { Source } from './Source/Source';
+import { Paragraph } from './Text/Paragraph/Paragraph';
+import { Source } from './Media/Source/Source';
 import { Table, TBody, Td, Th, THead, Tr } from './Table/Table';
-import { Video } from './Video/Video';
+import { Video } from './Media/Video/Video';
+import { Select } from './Form/Select/Select';
+import { Option } from './Form/Option/Option';
+import { Textarea } from './Form/Textarea/Textarea';
 
 export {
   Anchor,
@@ -42,4 +45,7 @@ export {
   Th,
   Td,
   Video,
+  Select,
+  Option,
+  Textarea,
 };

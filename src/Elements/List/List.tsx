@@ -17,8 +17,10 @@ export const List: React.FC<ListProps> = ({
   return (
     <>
       { (marker === "ol") 
-        ? <ol {...rest} className={`List ${rest.className}`}>{ children }</ol>
-        : <ul {...rest} className={`List ${rest.className}`}>{ children }</ul>
+        ? <ol {...rest} className={`List ${rest.className}`} style={{ listStyleType: "disc", ...rest.style }}>{ children }</ol>
+        : (marker === "ul") 
+        ? <ul {...rest} className={`List ${rest.className}`} style={{ listStyleType: "number", ...rest.style }}>{ children }</ul>
+        : <ul {...rest} className={`List ${rest.className}`} style={{ listStyleType: "none", ...rest.style }}>{ children }</ul>
       }
     </>
   );

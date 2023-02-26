@@ -1,9 +1,9 @@
 import React from "react";
-import { Combobox } from "../Combobox/Combobox";
+import { Combobox } from "../Elements/Form/Combobox/Combobox";
 import { ClassNamesType } from "../@types";
-import { Button } from "../Elements/Button/Button";
+import { Button } from "../Elements/Form/Button/Button";
 import { getClassNames } from "../Common/ClassNameHandler";
-import { Input } from "../Elements/Input/Input";
+import { Input } from "../Elements/Form/Input/Input";
 import { Message } from "../Message/Message";
 import { Select } from "../Select/Select";
 

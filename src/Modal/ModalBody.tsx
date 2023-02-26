@@ -1,15 +1,14 @@
 import React from 'react';
 import { ModalBodyType } from '../@types';
-import { getClassName } from '../Common/ClassNameHandler';
+import { Grid } from '../Elements';
 
 
 
 export const ModalBody: React.FC<ModalBodyType> = (data) => {
-  const defaultClasses = "relative p-4";
   
   return (
-    <div className={ getClassName(data.className, defaultClasses) }>
+    <Grid style={data.style}>
       {(data.children !== undefined) && data.children}
-    </div>
+    </Grid >
   );
 };

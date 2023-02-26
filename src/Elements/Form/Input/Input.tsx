@@ -17,7 +17,7 @@ export const Input: React.FC<InputProps> = ({
   return (
     <>
       { (rest.label !== undefined) &&
-        <label htmlFor={(rest.id !== undefined) ? rest.id : rest.label}>
+        <label htmlFor={(rest.id !== undefined) ? rest.id : rest.label} className={`Input`}>
           {rest.label}
         </label>
       }
