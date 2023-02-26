@@ -20,6 +20,8 @@ import { Select } from './Form/Select/Select';
 import { Option } from './Form/Option/Option';
 import { Textarea } from './Form/Textarea/Textarea';
 
+import "./index.scss"
+
 export {
   Anchor,
   Area,

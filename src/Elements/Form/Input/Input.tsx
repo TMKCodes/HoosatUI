@@ -25,6 +25,7 @@ export const Input: React.FC<InputProps> = ({
         {...rest}
         id={(rest.id !== undefined) ? rest.id : rest.label }
         className={`Input ${variant} ${rest.className}`}
+        style={{...rest.style}}
         >
         {children}
       </input>

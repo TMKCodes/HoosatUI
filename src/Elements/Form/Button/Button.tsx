@@ -15,6 +15,7 @@ export const Button: React.FC<ButtonProps> = ({
       {...rest}
       className={`Button ${variant} ${rest.className}`}
       type="button"
+      style={{...rest.style}}
     >
       {children}
     </button>

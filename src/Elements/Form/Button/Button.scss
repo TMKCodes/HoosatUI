@@ -1,8 +1,4 @@
-$primary-color: rgba(38, 38, 38, 1);
-$secondary-color: invert(rgba(38, 38, 38, 1));
-$border-color: rgb(114, 113, 113);
-$focus-color: rgba(141, 141, 141, 0.5);
-$text-color: rgba(229, 229, 229, 1);
+@use '../../../theme' as theme;
 
 .Button {
   font-weight: 500;
@@ -16,49 +12,50 @@ $text-color: rgba(229, 229, 229, 1);
   cursor: pointer;
 
   &.primary {
-    background-color: $primary-color;
-    color: $text-color;
+    
+    background-color: theme.$primary-color;
+    color: theme.$text-color;
 
     &:hover {
-      background-color: ligthen($primary-color, 30%);
+      background-color: ligthen(theme.$primary-color, 30%);
       outline: none;
-      box-shadow: 0 0 0 3px $focus-color;
-      border-color: $border-color;
+      box-shadow: 0 0 0 3px theme.$focus-color;
+      border-color: theme.$border-color;
     }
 
     &:focus {
       outline: none;
-      box-shadow: 0 0 0 3px $focus-color;
-      border-color: $border-color;
+      box-shadow: 0 0 0 3px theme.$focus-color;
+      border-color: theme.$border-color;
     }
 
     &:active {
-      background-color: darken($primary-color, 30%);
-      border-color: $border-color;
+      background-color: darken(theme.$primary-color, 30%);
+      border-color: theme.$border-color;
     }
   }
 
   &.secondary {
-    background-color: $secondary-color;
-    color: invert($text-color);
+    background-color: theme.$secondary-color;
+    color: invert(theme.$text-color);
 
 
     &:hover {
-      background-color: darken($secondary-color, 5%);
+      background-color: darken(theme.$secondary-color, 5%);
       outline: none;
-      box-shadow: 0 0 0 3px $focus-color;
-      border-color: $border-color;
+      box-shadow: 0 0 0 3px theme.$focus-color;
+      border-color: theme.$border-color;
     }
 
     &:focus {
       outline: none;
-      box-shadow: 0 0 0 3px $focus-color;
-      border-color: $border-color;
+      box-shadow: 0 0 0 3px theme.$focus-color;
+      border-color: theme.$border-color;
     }
 
     &:active {
-      background-color: darken($secondary-color, 5%);
-      border-color: $border-color;
+      background-color: darken(theme.$secondary-color, 5%);
+      border-color: theme.$border-color;
     }
   }
 

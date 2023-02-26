@@ -1,8 +1,4 @@
-$primary-color: invert(rgba(38, 38, 38, 1));
-$secondary-color: rgba(38, 38, 38, 1);
-$border-color: rgb(114, 113, 113);
-$focus-color: rgba(141, 141, 141, 0.5);
-$text-color: rgba(229, 229, 229, 1);
+@use '../../../theme' as theme;
 
 .Container {
   position: relative;
@@ -13,7 +9,7 @@ $text-color: rgba(229, 229, 229, 1);
   font-weight: 500;
   font-size: 0.875rem;
   line-height: 1.25rem; 
-  color: $text-color;
+  color: theme.$text-color;
   padding-left: 0.5rem;
 }
 
@@ -31,18 +27,18 @@ $text-color: rgba(229, 229, 229, 1);
   transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
   transition-duration: 150ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  background-color: $primary-color;
+  background-color: theme.$primary-color;
   border-width: 1px;
   border-style: solid;
-  border-color: $border-color;
-  color: $text-color;
+  border-color: theme.$border-color;
+  color: theme.$text-color;
   &::placeholder {
-    color: $text-color;
+    color: theme.$text-color;
   }
   &:focus {
     outline: none;
     box-shadow: 0 0 0 2px rgba(39, 128, 253, 0.3);
-    border-color: $border-color;
+    border-color: theme.$border-color;
   }
 }
 
@@ -53,7 +49,7 @@ $text-color: rgba(229, 229, 229, 1);
   overflow-x: hidden;
   display: block;
   width: 100%;
-  background-color: $primary-color;
+  background-color: invert(theme.$primary-color);
   margin-top: 0.4rem;
   padding-top: 0.75rem;
   padding-right: 1rem;
@@ -66,7 +62,7 @@ $text-color: rgba(229, 229, 229, 1);
   & > ul > li {
     padding: 0.5rem;
     &:hover {
-      background-color: darken($primary-color, 15%);
+      background-color: darken(invert(theme.$primary-color), 15%);
       cursor: pointer;
     }
   }

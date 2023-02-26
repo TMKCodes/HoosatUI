@@ -1,8 +1,4 @@
-$primary-color: #4A5568;
-$secondary-color: #CBD5E0;
-$border-color: #c9c8c8;
-$focus-color: rgba(66, 153, 225, 0.5);
-$active-color: #1A202C;
+@use '../../../theme' as theme;
 
 .Heading {
   font-weight: 500;
@@ -35,7 +31,7 @@ $active-color: #1A202C;
   }
   
   &:hover {
-    color: lighten($primary-color, 30%);
+    color: lighten(theme.$primary-color, 30%);
   }
 
 }
