@@ -1,4 +1,5 @@
 import React, { SelectHTMLAttributes } from "react";
+import { Option } from '../..'
 import './Select.scss';
 
 /**
@@ -10,6 +11,7 @@ import './Select.scss';
  */
 interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
   variant?: 'primary' | 'secondary';
+  options?: string[];
   id?: string,
   label?: string
 }
@@ -34,9 +36,14 @@ export const Select: React.FC<SelectProps> = ({
       <select
         {...rest}
         id={(rest.id !== undefined) ? rest.id : rest.label }
-        className={`Select ${variant} ${rest.className}`}
-        >
-        {children}
+        className={`Select ${variant} ${rest.className}`}>
+        <>
+          { rest.options?.map((option) => (
+              <Option>{option}</Option>
+            ))
+          }
+          {children}
+        </>
       </select>
     </>
   );

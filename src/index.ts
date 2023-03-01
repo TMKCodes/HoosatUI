@@ -1,10 +1,11 @@
 import { Checkbox } from "./Checkbox/Checkbox";
-import { Combobox } from "./Elements/Form/Combobox/Combobox";
-import { Form } from "./Form/Form";
 import { InputList } from "./InputList/InputList";
 import { Message } from "./Message/Message";
 import { Modal, ModalBody, ModalFooter, ModalHeader } from "./Modal";
-import { Table } from "./Table/Table";
+
+import {
+  FormBuilder, TableBuilder
+} from './Builders';
 
 import { 
   Anchor,
@@ -24,7 +25,7 @@ import {
   ListItem,
   Paragraph,
   Source,
-  Table as ElementsTable,
+  Table,
   THead,
   TBody,
   Tr,
@@ -34,11 +35,12 @@ import {
   Select,
   Option,
   Textarea,
+  Form,
+  Combobox
 } from './Elements';
 
 export {
   Checkbox,
-  Combobox,
   Form,
   InputList,
   Message,
@@ -46,7 +48,7 @@ export {
   ModalBody,
   ModalFooter,
   ModalHeader,
-  Table,
+
   Anchor,
   Area,
   Audio,
@@ -62,7 +64,7 @@ export {
   ListItem,
   Paragraph,
   Source,
-  ElementsTable,
+  Table,
   TBody,
   THead,
   Tr,
@@ -73,5 +75,9 @@ export {
   Button,
   Select,
   Option,
-  Textarea
+  Textarea,
+  Combobox,
+
+  FormBuilder,
+  TableBuilder,
 }

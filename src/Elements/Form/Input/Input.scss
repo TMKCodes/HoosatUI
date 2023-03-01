@@ -12,7 +12,7 @@
 
   &.primary {
     background-color: theme.$secondary-color;
-    color: theme.$text-color;
+    color: invert(theme.$text-color);
 
     &:hover {
       background-color: darken(theme.$secondary-color, 30%);
