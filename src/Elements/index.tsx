@@ -21,6 +21,7 @@ import { Textarea } from './Form/Textarea/Textarea';
 import { Combobox } from './Form/Combobox/Combobox';
 import { Table, TBody, Td, Th, THead, Tr } from './Table/Table';
 import { Form } from './Form/Form/Form';
+import { Message } from './Message/Message';
 
 import "./index.scss"
 
@@ -54,6 +55,7 @@ export {
   Textarea,
   Combobox,
   Form,
+  Message,
 };
 
 // TODO:

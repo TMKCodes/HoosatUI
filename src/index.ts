@@ -1,10 +1,9 @@
-import { Checkbox } from "./Checkbox/Checkbox";
-import { InputList } from "./InputList/InputList";
-import { Message } from "./Message/Message";
 import { Modal, ModalBody, ModalFooter, ModalHeader } from "./Modal";
 
 import {
-  FormBuilder, TableBuilder
+  FormBuilder, 
+  TableBuilder,
+  InputBuilder
 } from './Builders';
 
 import { 
@@ -36,19 +35,17 @@ import {
   Option,
   Textarea,
   Form,
-  Combobox
+  Combobox,
+  Message
 } from './Elements';
 
 export {
-  Checkbox,
-  Form,
-  InputList,
-  Message,
   Modal,
   ModalBody,
   ModalFooter,
   ModalHeader,
 
+  Message,
   Anchor,
   Area,
   Audio,
@@ -70,6 +67,7 @@ export {
   Tr,
   Th,
   Td,
+  Form,
   Video,
   Input,
   Button,
@@ -80,4 +78,5 @@ export {
 
   FormBuilder,
   TableBuilder,
+  InputBuilder,
 }

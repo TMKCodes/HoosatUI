@@ -1,7 +1,7 @@
 import React from 'react';
 import '@testing-library/jest-dom'
 import { render, fireEvent } from '@testing-library/react';
-import { InputList } from './InputList';
+import { InputBuilder } from './InputBuilder';
 
 const testInputs = [
   {
@@ -25,7 +25,7 @@ const testInputs = [
 describe('InputList', () => {
   it('renders inputs correctly', () => {
     const { getByLabelText } = render(
-      <InputList inputs={testInputs} />
+      <InputBuilder inputs={testInputs} />
     );
 
     expect(getByLabelText('Label 1')).toBeInTheDocument();
@@ -34,7 +34,7 @@ describe('InputList', () => {
 
   it('calls onChange correctly', () => {
     const { getByLabelText } = render(
-      <InputList inputs={testInputs} />
+      <InputBuilder inputs={testInputs} />
     );
 
     const input1 = getByLabelText('Label 1') as HTMLInputElement;
