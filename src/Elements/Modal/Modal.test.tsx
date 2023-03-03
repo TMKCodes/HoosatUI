@@ -15,12 +15,7 @@ describe('Modal component', () => {
   });
 
   it('renders with custom classNames', () => {
-    const { container } = render(<Modal className={{ container: 'custom-container-class' }} />);
+    const { container } = render(<Modal className='custom-container-class' />);
     expect(container.firstChild).toHaveClass('custom-container-class');
-  });
-
-  it('overrides default classNames with custom classNames', () => {
-    const { container } = render(<Modal className={{ container: 'reset-all-before custom-container-class' }} />);
-    expect(container.firstChild).toHaveClass('reset-all-before custom-container-class');
   });
 });

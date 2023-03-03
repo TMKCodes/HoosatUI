@@ -1,5 +1,3 @@
-import { Modal, ModalBody, ModalFooter, ModalHeader } from "./Modal";
-
 import {
   FormBuilder, 
   TableBuilder,
@@ -36,15 +34,14 @@ import {
   Textarea,
   Form,
   Combobox,
-  Message
+  Message,
+  Modal, 
+  ModalBody, 
+  ModalFooter, 
+  ModalHeader
 } from './Elements';
 
 export {
-  Modal,
-  ModalBody,
-  ModalFooter,
-  ModalHeader,
-
   Message,
   Anchor,
   Area,
@@ -75,6 +72,10 @@ export {
   Option,
   Textarea,
   Combobox,
+  Modal,
+  ModalBody,
+  ModalFooter,
+  ModalHeader,
 
   FormBuilder,
   TableBuilder,

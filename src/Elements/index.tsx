@@ -22,6 +22,7 @@ import { Combobox } from './Form/Combobox/Combobox';
 import { Table, TBody, Td, Th, THead, Tr } from './Table/Table';
 import { Form } from './Form/Form/Form';
 import { Message } from './Message/Message';
+import { Modal, ModalBody, ModalFooter, ModalHeader } from './Modal';
 
 import "./index.scss"
 
@@ -56,6 +57,10 @@ export {
   Combobox,
   Form,
   Message,
+  Modal,
+  ModalBody,
+  ModalHeader,
+  ModalFooter,
 };
 
 // TODO:

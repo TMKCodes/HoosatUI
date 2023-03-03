@@ -1,5 +1,5 @@
 # HoosatUI
-HoosatUI is a user interface library for React and SASS that provides a set of reusable UI components to quickly build beautiful and responsive user interfaces. First version was done with Tailwind, currently moving everything to use SASS and adding components and more readable code.
+HoosatUI is a user interface library for React made with SASS styling that provides set of reusable UI components to quickly build beautiful and responsive user interfaces.
 
 ## Installation
 You can install HoosatUI via npm:
@@ -70,7 +70,6 @@ HoosatUI currently provides the following components:
 + Image: An image element
 + ImageMap: An image map element
 + Audio: An audio element for playing audio files
-
 
 ### Miscellaneous Elements
 + Anchor: An anchor element for linking to another page or section within the same page

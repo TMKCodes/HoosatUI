@@ -1,0 +1,12 @@
+@use '../../../theme' as theme;
+
+
+.ModalFooter {
+  padding-bottom: 1rem;
+  width: 100%;
+  justify-content: flex-end;
+
+  & > button {
+    width: 100%;
+  }
+}
