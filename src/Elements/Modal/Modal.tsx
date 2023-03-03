@@ -15,7 +15,7 @@ export const Modal: React.FC<ModalProps> = ({
 }) => {
 
   return (
-    <Grid {...rest} className={`ModalContainer ${rest.className}`}>
+    <Grid {...rest} className={`ModalContainer ${(rest.className !== undefined) ? rest.className : ""}`}>
       <Grid className='ModalInner'>
         <Flex className='ModalContent'>
           {(children !== undefined) ? children : (

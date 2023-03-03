@@ -13,7 +13,7 @@ export const Message: React.FC<MessageType> = ({
   ...rest
 }) => {
   return (
-    <Grid id={rest.id} {...rest}>
+    <Grid {...rest} className={`Message ${(rest.className !== undefined) ? rest.className : ""}`}>
       <Paragraph>{rest.message}</Paragraph>
     </Grid>
   );

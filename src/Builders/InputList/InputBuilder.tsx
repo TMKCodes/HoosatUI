@@ -1,14 +1,14 @@
 import React, { HTMLAttributes, HTMLInputTypeAttribute } from "react";
 import { Input } from '../../Elements';
 
-interface Input extends HTMLAttributes<HTMLInputElement>{
+interface InputProps extends HTMLAttributes<HTMLInputElement>{
   label: string | undefined;
   type: HTMLInputTypeAttribute | undefined;
   value: string | number | readonly string[] | undefined;
 }
 
 
-export const InputBuilder: React.FC<{ inputs: Input[]}> = (data) => {
+export const InputBuilder: React.FC<{ inputs: InputProps[]}> = (data) => {
 
   return (
     <>

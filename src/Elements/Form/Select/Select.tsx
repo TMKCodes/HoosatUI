@@ -36,7 +36,7 @@ export const Select: React.FC<SelectProps> = ({
       <select
         {...rest}
         id={(rest.id !== undefined) ? rest.id : rest.label }
-        className={`Select ${variant} ${rest.className}`}>
+        className={`Select ${variant} ${(rest.className !== undefined) ? rest.className : ""}`}>
         <>
           { rest.options?.map((option) => (
               <Option>{option}</Option>

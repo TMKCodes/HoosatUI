@@ -26,7 +26,7 @@ export const Button: React.FC<ButtonProps> = ({
   return (
     <button
       {...rest}
-      className={`Button ${variant} ${rest.className}`}
+      className={`Button ${variant} ${(rest.className !== undefined) ? rest.className : ""}`}
       type="button"
       style={{...rest.style}}>
       {children}

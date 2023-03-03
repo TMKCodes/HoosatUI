@@ -20,6 +20,6 @@ export const Audio: React.FC<AudioProps> = ({
   ...rest
 }) => {
   return (
-    <audio {...rest} className={`Audio ${rest.className}`} >{ children }</audio>
+    <audio {...rest} className={`Audio ${(rest.className !== undefined) ? rest.className : ""}`} >{ children }</audio>
   );
 }

@@ -11,7 +11,7 @@ export const ModalBody: React.FC<ModalBodyProps> = ({
   ...rest
 }) => {
   return (
-    <Grid  {...rest} className={`ModalBody ${rest.className}`}>
+    <Grid  {...rest} className={`ModalBody ${(rest.className !== undefined) ? rest.className : ""}`}>
       {children}
     </Grid >
   );

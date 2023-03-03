@@ -24,30 +24,30 @@ export const Heading: React.FC<HeadingProps> = ({
   return (
     <>
     { (variant === "h1") 
-      ? <h1 {...rest} className={`Heading ${variant} ${rest.className}`}>
+      ? <h1 {...rest} className={`Heading ${variant} ${(rest.className !== undefined) ? rest.className : ""}`}>
         {children}
         </h1>
       : (variant === "h2")
-      ? <h2 {...rest} className={`Heading ${variant} ${rest.className}`}>
+      ? <h2 {...rest} className={`Heading ${variant} ${(rest.className !== undefined) ? rest.className : ""}`}>
         {children}
         </h2>
       : (variant === "h3")
-      ? <h3 {...rest} className={`Heading ${variant} ${rest.className}`}>
+      ? <h3 {...rest} className={`Heading ${variant} ${(rest.className !== undefined) ? rest.className : ""}`}>
         {children}
         </h3>
       : (variant === "h4")
-      ? <h4 {...rest} className={`Heading ${variant} ${rest.className}`}>
+      ? <h4 {...rest} className={`Heading ${variant} ${(rest.className !== undefined) ? rest.className : ""}`}>
         {children}
         </h4>
       : (variant === "h5")
-      ? <h5 {...rest} className={`Heading ${variant} ${rest.className}`}>
+      ? <h5 {...rest} className={`Heading ${variant} ${(rest.className !== undefined) ? rest.className : ""}`}>
         {children}
         </h5>
       : (variant === "h6")
-      ? <h6 {...rest} className={`Heading ${variant} ${rest.className}`}>
+      ? <h6 {...rest} className={`Heading ${variant} ${(rest.className !== undefined) ? rest.className : ""}`}>
         {children}
         </h6>
-      : <h1 {...rest} className={`Heading ${variant} ${rest.className}`}>
+      : <h1 {...rest} className={`Heading ${variant} ${(rest.className !== undefined) ? rest.className : ""}`}>
         {children}
         </h1>
     } 

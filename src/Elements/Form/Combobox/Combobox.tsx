@@ -22,10 +22,13 @@ interface ComboboxProps extends InputHTMLAttributes<HTMLInputElement> {
 
 /**
  * Combobox component renders a Combobox input field
- * @param {ComboboxProps} data - Props for Combobox component
+ * @param {ComboboxProps} rest - Props for Combobox component
  * @returns {JSX.Element} Combobox component
  */
-export const Combobox: React.FC<ComboboxProps> = (data) => {
+export const Combobox: React.FC<ComboboxProps> = ({
+  children,
+  ...rest
+}) => {
 
   const [searchText, setSearchText] = useState('');
   const [result, setResult] = useState<string[]>([]);
@@ -47,7 +50,7 @@ export const Combobox: React.FC<ComboboxProps> = (data) => {
   const handleOptionClick = (e: React.BaseSyntheticEvent, option: string) => {
     setShowResults(false);
     let tmpResult: string[] = [...result];
-    if (data.multiple === false) {
+    if (rest.multiple === false) {
       tmpResult = [option];
       setSearchText(tmpResult[0]);
     } else {
@@ -59,41 +62,41 @@ export const Combobox: React.FC<ComboboxProps> = (data) => {
       setSearchText(tmpResult.join(", "));
     }
     setResult(tmpResult);
-    if (data.onSelect !== undefined) {
-      data.onSelect({ ...e, target: { value: tmpResult[0] }} as React.ChangeEvent<HTMLInputElement>)
+    if (rest.onSelect !== undefined) {
+      rest.onSelect({ ...e, target: { value: tmpResult[0] }} as React.ChangeEvent<HTMLInputElement>)
     } else {
-      console.log("data.onSelect === undefined");
+      console.log("rest.onSelect === undefined");
     }  
   }; 
 
   const filteredOptions = () => {
-    if (!data.search) return data.options;
-    if (data.multiple) {
+    if (!rest.search) return rest.options;
+    if (rest.multiple) {
       const tmpSearchText = searchText.split(", ");
       let result: string[] = [];
       tmpSearchText.forEach((text) => {
-        const matched = data.options.filter((option) => option.toLowerCase().indexOf(text.toLowerCase()) !== -1);
+        const matched = rest.options.filter((option) => option.toLowerCase().indexOf(text.toLowerCase()) !== -1);
         result = [...result, ...matched];
       });
       result = result.filter((element, index) => result.indexOf(element) === index);
       return result;
     } else {
-      return data.options.filter((option) => option.toLowerCase().indexOf(searchText.toLowerCase()) !== -1);
+      return rest.options.filter((option) => option.toLowerCase().indexOf(searchText.toLowerCase()) !== -1);
     }
   } 
 
   return (
-    <div className="Container" data-testid="combobox-container">
+    <div {...rest} className={`Container ${(rest.className !== undefined) ? rest.className : ""}`}>
       <Input className="InputOverwrite"
-        label={ (data !== undefined && data.label !== undefined) ? data.label : "" } 
-        data-testid="combobox-input" id={(data !== undefined && data.id !== undefined) ? data.id : ""}
+        label={ (rest !== undefined && rest.label !== undefined) ? rest.label : "" } 
+        rest-testid="combobox-input" id={(rest !== undefined && rest.id !== undefined) ? rest.id : ""}
         type="text"
         value={searchText}
         onClick={handleClick}
         onChange={handleInput}>
       </Input>
       {showResults && (
-        <Grid className="OptionContainer" data-testid="combobox-option-container">
+        <Grid className="OptionContainer" rest-testid="combobox-option-container">
           <List marker="none" style={{ padding: "0px"}}>
             {filteredOptions().map((option, index) => {
               return (result.includes(option)) 

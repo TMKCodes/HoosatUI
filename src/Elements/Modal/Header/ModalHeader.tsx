@@ -13,7 +13,7 @@ export const ModalHeader: React.FC<ModalHeaderProps> = ({
   ...rest
 }) => {
   return (
-    <Flex {...rest} className={`ModalHeader ${rest.className}`}>
+    <Flex {...rest} className={`ModalHeader ${(rest.className !== undefined) ? rest.className : ""}`}>
       <Heading>
         {(rest.header !== undefined) && rest.header}
       </Heading>

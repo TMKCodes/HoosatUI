@@ -34,7 +34,7 @@ export const Textarea: React.FC<TextareaProps> = ({
       <textarea
         {...rest}
         id={(rest.id !== undefined) ? rest.id : rest.label }
-        className={`Textarea ${variant} ${rest.className}`}>
+        className={`Textarea ${variant} ${(rest.className !== undefined) ? rest.className : ""}`}>
         {children}
       </textarea>
     </>

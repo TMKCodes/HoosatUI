@@ -18,6 +18,6 @@ export const Source: React.FC<SourceProps> = ({
   ...rest
 }) => {
   return (
-    <Source {...rest} className={`Source ${rest.className}`} />
+    <Source {...rest} className={`Source ${(rest.className !== undefined) ? rest.className : ""}`} />
   );
 }

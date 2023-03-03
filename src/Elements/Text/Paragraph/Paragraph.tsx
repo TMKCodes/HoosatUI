@@ -20,6 +20,6 @@ export const Paragraph: React.FC<ParagraphProps> = ({
   ...rest
 }) => {
   return (
-    <p {...rest} className={`Paragraph ${rest.className}`}>{children}</p>
+    <p {...rest} className={`Paragraph ${(rest.className !== undefined) ? rest.className : ""}`}>{children}</p>
   );
 }

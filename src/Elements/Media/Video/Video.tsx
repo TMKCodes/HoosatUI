@@ -20,6 +20,6 @@ export const Video: React.FC<VideoProps> = ({
   ...rest
 }) => {
   return (
-    <video {...rest} className={`Video ${rest.className}`} >{ children }</video>
+    <video {...rest} className={`Video ${(rest.className !== undefined) ? rest.className : ""}`} >{ children }</video>
   );
 }
