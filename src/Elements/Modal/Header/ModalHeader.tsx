@@ -3,9 +3,9 @@ import { Button, Flex, Heading } from '../..';
 
 import "./ModalHeader.scss"
 
-interface ModalHeaderProps extends HTMLAttributes<HTMLDivElement> {
+interface ModalHeaderProps extends HTMLAttributes<HTMLDivElement | HTMLButtonElement> {
   header?: string;
-  buttonClick?: React.MouseEventHandler<HTMLButtonElement> | undefined
+  onClick?: React.MouseEventHandler<HTMLButtonElement> | undefined
 }
 
 export const ModalHeader: React.FC<ModalHeaderProps> = ({
@@ -13,11 +13,11 @@ export const ModalHeader: React.FC<ModalHeaderProps> = ({
   ...rest
 }) => {
   return (
-    <Flex {...rest} className={`ModalHeader ${(rest.className !== undefined) ? rest.className : ""}`}>
+    <Flex className={`ModalHeader ${(rest.className !== undefined) ? rest.className : ""}`}>
       <Heading>
         {(rest.header !== undefined) && rest.header}
       </Heading>
-      <Button type="button" onClick={rest.buttonClick}>x</Button>
+      <Button type="button" onClick={rest.onClick}>x</Button>
       {children}
     </Flex>
   );

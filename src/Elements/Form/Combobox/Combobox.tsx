@@ -17,7 +17,7 @@ interface ComboboxProps extends InputHTMLAttributes<HTMLInputElement> {
   label?: string,
   options: string[],
   multiple?: boolean,
-  search?: boolean,
+  search?: string,
 }
 
 /**
