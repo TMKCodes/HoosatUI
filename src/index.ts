@@ -1,7 +1,8 @@
 import {
   FormBuilder, 
   TableBuilder,
-  InputBuilder
+  InputBuilder,
+  PageBuilder
 } from './Builders';
 
 import { 
@@ -80,4 +81,5 @@ export {
   FormBuilder,
   TableBuilder,
   InputBuilder,
+  PageBuilder,
 }
