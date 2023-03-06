@@ -24,7 +24,7 @@ import { Button } from '@tonto/hoosat-ui';
 
 const App = () => {
   return (
-    <Button onClick={() => console.log('clicked!')}>Click me!</Button>
+    <Button onClick={() => if(process.env.NODE_ENV === "development") console.log('clicked!')}>Click me!</Button>
   );
 }
 

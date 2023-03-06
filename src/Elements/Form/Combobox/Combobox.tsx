@@ -65,7 +65,7 @@ export const Combobox: React.FC<ComboboxProps> = ({
     if (rest.onSelect !== undefined) {
       rest.onSelect({ ...e, target: { value: tmpResult[0] }} as React.ChangeEvent<HTMLInputElement>)
     } else {
-      console.log("rest.onSelect === undefined");
+      if(process.env.NODE_ENV === "development") console.log("rest.onSelect === undefined");
     }  
   }; 
 
