@@ -16,7 +16,7 @@ export const PageBuilder: React.FC<PageProps> = ({
   ...rest
 }) => {
   return (
-    <Grid className="container">
+    <Grid {...rest} className={`container ${rest.className}`}>
       <GridItem className="header">
         {rest.header}
       </GridItem>
