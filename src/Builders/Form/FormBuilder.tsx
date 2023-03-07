@@ -2,12 +2,12 @@ import React, { FormHTMLAttributes } from "react";
 import { Button, Combobox, Form, Grid, Heading, Input, Select, Textarea } from "../../Elements";
 
 interface FormInputProps {
-  inputType: string,
+  itype: string,
   [key: string]: any  
 }
 
 interface FormProps extends FormHTMLAttributes<HTMLFormElement> {
-  submitButtonText: string | undefined, 
+  submitbuttontext: string | undefined, 
   header?: string,
   inputs: FormInputProps[], 
   onSubmit(value: React.BaseSyntheticEvent): void,
@@ -20,31 +20,30 @@ export const FormBuilder: React.FC<FormProps> = ({
 }) => {
 
   const getElementByInput: any = (input: FormInputProps) => {
-    switch(input.inputType) {
+    switch(input.itype) {
       case "container": 
-        return <div {...input}>
+        return <div key={`${input.itype}`}{...input}>
         {input.inputs.map((input: any) => (
           getElementByInput(input)
         ))}
         </div>
       case "input":
-        return <Input onChange={input.onChange} {...input} />
+        return <Input key={`${input.itype}`} onChange={input.onChange} {...input} />
       case "select":
-        return <Select onChange={input.onChange} {...input} />
+        return <Select key={`${input.itype}`} onChange={input.onChange} {...input} />
       case "combobox":
-        return <Combobox options={input.options} {...input} />
+        return <Combobox key={`${input.itype}`} options={input.options} {...input} />
       case "button":
-        return <Button {...input}>{input.children}</Button>
+        return <Button key={`${input.itype}`} {...input}>{input.children}</Button>
       case "textarea":
-        return <Textarea {...input}>{input.children}</Textarea>
+        return <Textarea key={`${input.itype}`} {...input}>{input.children}</Textarea>
       default:
         return <></>
     }
   }
 
   return (
-    <Form id={rest.id} data-testid={rest.id} 
-      onSubmit={(e) => { e.preventDefault(); rest.onSubmit(e); } }  >
+    <Form id={rest.id} {...rest} onSubmit={(e) => { e.preventDefault(); rest.onSubmit(e); } }  >
         <Grid style={{ gap: "0.5rem", padding: "1rem"}}>
           <Heading variant="h2" style={{margin: "0px"}}>{rest.header}</Heading>
           { rest.inputs.map((input) => (
@@ -52,7 +51,7 @@ export const FormBuilder: React.FC<FormProps> = ({
           ))}
           { children }
           <Button style={{ width: "100%" }} onClick={(e) => { e.preventDefault(); rest.onSubmit(e); }}>
-            {(rest.submitButtonText !== undefined) ? rest.submitButtonText : "Send" }
+            {(rest.submitbuttontext !== undefined) ? rest.submitbuttontext : "Send" }
           </Button>
         </Grid>
      </Form>
@@ -62,12 +61,12 @@ export const FormBuilder: React.FC<FormProps> = ({
 /**
   inputs={[
     { 
-      inputType: "container"
+      itype: "container"
       id: "container-test"
       className: "",
       inputs: [
         { 
-          inputType: "input", 
+          itype: "input", 
           id: "input-test", 
           label: "testing",
           type: "text", 
@@ -77,13 +76,13 @@ export const FormBuilder: React.FC<FormProps> = ({
           value: "" 
         },
         {
-          inputType: "message":
+          itype: "message":
           id: "message-test"
         }
       ]
     },
     { 
-      inputType: "input", 
+      itype: "input", 
       id: "input-test", 
       label: "testing",
       type: "text", 
@@ -93,7 +92,7 @@ export const FormBuilder: React.FC<FormProps> = ({
       value: "" 
     },
     {
-      inputType: "select",
+      itype: "select",
       id: "select-test",
       name: "",
       label: "testing",
@@ -104,7 +103,7 @@ export const FormBuilder: React.FC<FormProps> = ({
       multiple: true
     }, 
     {
-      inputType: "combobox",
+      itype: "combobox",
       id: "combobox-test",
       label: "testing",
       className: { container: "", label: "", input: "", optionContainer: "", option: ""},
