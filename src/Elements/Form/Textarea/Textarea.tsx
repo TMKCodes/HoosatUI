@@ -27,7 +27,7 @@ export const Textarea: React.FC<TextareaProps> = ({
   return (
     <>
       { (rest.label !== undefined) &&
-        <label htmlFor={(rest.id !== undefined) ? rest.id : rest.label} className={`Textarea`}>
+        <label htmlFor={(rest.id !== undefined) ? rest.id : rest.label} className={`TextareaLabel`}>
           {rest.label}
         </label>
       }

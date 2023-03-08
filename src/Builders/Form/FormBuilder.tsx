@@ -22,21 +22,21 @@ export const FormBuilder: React.FC<FormProps> = ({
   const getElementByInput: any = (input: FormInputProps) => {
     switch(input.itype) {
       case "container": 
-        return <div key={`${input.itype}`}{...input}>
+        return <div key={`${input.id}`}{...input}>
         {input.inputs.map((input: any) => (
           getElementByInput(input)
         ))}
         </div>
       case "input":
-        return <Input key={`${input.itype}`} onChange={input.onChange} {...input} />
+        return <Input key={`${input.id}`} onChange={input.onChange} {...input} />
       case "select":
-        return <Select key={`${input.itype}`} onChange={input.onChange} {...input} />
+        return <Select key={`${input.id}`} onChange={input.onChange} {...input} />
       case "combobox":
-        return <Combobox key={`${input.itype}`} options={input.options} {...input} />
+        return <Combobox key={`${input.id}`} options={input.options} {...input} />
       case "button":
-        return <Button key={`${input.itype}`} {...input}>{input.children}</Button>
+        return <Button key={`${input.id}`} {...input}>{input.children}</Button>
       case "textarea":
-        return <Textarea key={`${input.itype}`} {...input}>{input.children}</Textarea>
+        return <Textarea key={`${input.id}`} {...input}>{input.children}</Textarea>
       default:
         return <></>
     }

@@ -29,7 +29,7 @@ export const Select: React.FC<SelectProps> = ({
   return (
     <>
       { (rest.label !== undefined) &&
-        <label htmlFor={(rest.id !== undefined) ? rest.id : rest.label} className={`Select`}>
+        <label htmlFor={(rest.id !== undefined) ? rest.id : rest.label} className={`SelectLabel`}>
           {rest.label}
         </label>
       }
