@@ -45,7 +45,7 @@ export const FormBuilder: React.FC<FormProps> = ({
   return (
     <Form id={rest.id} {...rest} onSubmit={(e) => { e.preventDefault(); rest.onSubmit(e); } }  >
         <Grid>
-          <Heading variant="h2">{rest.header}</Heading>
+          {rest.header !== undefined && <Heading variant="h2">{rest.header}</Heading> }
           { rest.inputs.map((input) => (
             getElementByInput(input) 
           ))}
