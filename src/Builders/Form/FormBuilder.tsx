@@ -44,8 +44,8 @@ export const FormBuilder: React.FC<FormProps> = ({
 
   return (
     <Form id={rest.id} {...rest} onSubmit={(e) => { e.preventDefault(); rest.onSubmit(e); } }  >
-        <Grid style={{ gap: "0.5rem", padding: "1rem"}}>
-          <Heading variant="h2" style={{margin: "0px"}}>{rest.header}</Heading>
+        <Grid>
+          <Heading variant="h2">{rest.header}</Heading>
           { rest.inputs.map((input) => (
             getElementByInput(input) 
           ))}
