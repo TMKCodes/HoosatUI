@@ -2,6 +2,7 @@
 
 .Container {
   position: relative;
+  width: 100%;
 }
 
 .Label {
@@ -15,7 +16,7 @@
 
 .InputOverwrite {
   display: block;
-  width: 100%;
+  width: calc(100% - 2rem - 2px);
   padding-top: 0.75rem;
   padding-right: 1.25rem;
   padding-bottom: 0.75rem;
@@ -48,7 +49,7 @@
   overflow-y: auto;
   overflow-x: hidden;
   display: block;
-  width: 100%;
+  width: calc(100% - 1.75rem - 4px);
   background-color: invert(theme.$primary-color);
   margin-top: 0.4rem;
   padding-top: 0.75rem;
@@ -66,4 +67,10 @@
       cursor: pointer;
     }
   }
+}
+
+.combobox-icon {
+  padding-right: 10px;
+  height: 16px;
+  width: 16px;
 }
