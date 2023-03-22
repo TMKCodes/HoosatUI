@@ -36,7 +36,9 @@ import {
   Modal, 
   ModalBody, 
   ModalFooter, 
-  ModalHeader
+  ModalHeader,
+  Icons,
+  Markdown,
 } from './src/';
 
 export {
@@ -79,4 +81,8 @@ export {
   TableBuilder,
   InputBuilder,
   PageBuilder,
+
+  Icons,
+
+  Markdown,
 }

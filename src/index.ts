@@ -5,6 +5,14 @@ import {
   PageBuilder
 } from './Builders';
 
+import {
+  Markdown
+} from './Markdown/Markdown';
+
+import {
+  Icons
+} from './Icons/Icons';
+
 import { 
   Anchor,
   Area,
@@ -82,4 +90,8 @@ export {
   TableBuilder,
   InputBuilder,
   PageBuilder,
+
+  Icons,
+
+  Markdown,
 }
