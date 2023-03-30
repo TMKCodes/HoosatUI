@@ -25,6 +25,15 @@ export const Markdown: React.FC<MarkdownProps> = (rest) => {
             </code>
           );
         },
+        img: ({ node, className, children, ...props }) => {
+          return (
+            <img {...props} src={props.src} alt={props.alt} className={className} onClick={(e) => {
+              console.log(e);
+            }}>
+              {children}
+            </img>
+          );
+        },
       }}
       >
       { rest.markdown }
