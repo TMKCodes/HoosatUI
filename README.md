@@ -1,5 +1,5 @@
 # HoosatUI
-HoosatUI is a user interface library for React made with SASS styling that provides set of reusable UI components to quickly build beautiful and responsive user interfaces.
+HoosatUI is a user interface library for React made with CSS styling that provides set of reusable UI components to quickly build beautiful and responsive user interfaces.
 
 ## Installation
 You can install HoosatUI via npm:
@@ -14,6 +14,45 @@ Or via git submodule:
 git submodule add https://github.com/TMKCodes/HoosatUI
 ```
 
+## Dependancies
+
+There are few dependancies, because of markdown support.
+
+1. react-markdown
+2. remark-gfm
+3. rehype-highlight
+
+You have to install them in your project to use HoosatUI.
+
+```
+npm install react-markdown remark-gfm rehype-highlight
+```
+
+## Remix support
+
+We moved from Tailwind to SASS and then to CSS to get Remix support.
+
+Since there is problem with ESM only packages in Remix. You have
+to modify remix.config.js to include serverDependanciesToBundle
+
+```
+module.exports = {
+  serverDependenciesToBundle: [/.*/],
+}
+```
+
+Another thing since Remix uses different way of importing CSS to
+React you have to import HoosatUI/index.css in routes where you
+use HoosatUI.
+
+```
+import HoosatUICSS from '../HoosatUI/index.css';
+export const links: LinksFunction = () => {
+  return [
+    { rel: "stylesheet", href: HoosatUICSS },
+  ]
+}
+```
 
 ## Usage
 Import any component from HoosatUI and use it in your React application:
