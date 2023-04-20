@@ -1,5 +1,5 @@
 import React, { LabelHTMLAttributes } from 'react';
-import './Label.scss';
+import './Label.css';
 
 /**
  * A styled Label tag component.

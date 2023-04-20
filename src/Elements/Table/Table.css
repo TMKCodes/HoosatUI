@@ -1,5 +1,4 @@
-@use '../../theme' as theme;
-
+@import '../../theme.css';
 
 .Table {
   margin: 0;

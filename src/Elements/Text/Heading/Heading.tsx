@@ -1,5 +1,5 @@
 import React, { HTMLAttributes } from 'react';
-import './Heading.scss';
+import './Heading.css';
 
 /**
  * A styled Heading tag component.

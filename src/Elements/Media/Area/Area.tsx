@@ -1,5 +1,5 @@
 import React, { AreaHTMLAttributes } from 'react';
-import './Area.scss';
+import './Area.css';
 
 /**
  * A styled Area tag component.

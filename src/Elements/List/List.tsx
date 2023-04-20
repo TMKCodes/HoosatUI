@@ -1,6 +1,6 @@
 import React, { OlHTMLAttributes, LiHTMLAttributes } from 'react';
 
-import './List.scss';
+import './List.css';
 
 /**
  * A styled List tag component.

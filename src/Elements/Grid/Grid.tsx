@@ -1,5 +1,5 @@
 import React, { HTMLAttributes } from 'react';
-import './Grid.scss';
+import './Grid.css';
 
 /**
  * A styled Grid tag component.

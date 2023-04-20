@@ -1,0 +1,17 @@
+@import '../../../theme.css';
+
+.ModalHeader {
+  width: 100%;
+  padding: 0px;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+.ModalHeader > h1,
+.ModalHeader > h2,
+.ModalHeader > h3,
+.ModalHeader > h4,
+.ModalHeader > h5,
+.ModalHeader > h6 {
+  padding-left: 0px;
+}

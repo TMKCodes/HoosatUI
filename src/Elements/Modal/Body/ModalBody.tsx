@@ -1,7 +1,7 @@
 import React, { HTMLAttributes } from 'react';
 import { Grid } from '../..';
 
-import "./ModalBody.tsx";
+import "./ModalBody.css";
 
 interface ModalBodyProps extends HTMLAttributes<HTMLDivElement> {
 }

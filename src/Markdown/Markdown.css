@@ -1,17 +1,8 @@
-@mixin border-radius($radius) {
-  -webkit-border-radius: $radius;
-     -moz-border-radius: $radius;
-      -ms-border-radius: $radius;
-          border-radius: $radius;
-}
-
 .gfm {
   white-space: normal !important;
   word-wrap: normal !important;
   font-family: 'Helvetica Neue', Arial, sans-serif;
   line-height: 1.6;
-
-  /* Set color for text and links */
   color: #333;
 }
 
@@ -21,7 +12,6 @@
 .gfm h4,
 .gfm h5,
 .gfm h6 {
-  /* Set font sizes and weights for headings */
   font-weight: bold;
   margin-bottom: 0.5em;
 }
@@ -44,7 +34,6 @@
   font-size: 0.67em;
 }
 .gfm p {
-  /* Set margin and padding for paragraphs */
   display: block;
   margin-top: 0;
   margin-bottom: 1em;
@@ -56,62 +45,50 @@
   width: 100%;
   margin: 0px;
   padding: 0px;
-  @include border-radius(20px);
+  border-radius: 20px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  &:hover {
-    cursor: pointer;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  }
+}
+.gfm img:hover {
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.gfm p:has(> :nth-child(2)) {
-  & > img {
-    width: calc(100% / 2 - 3px);
-  }
+.gfm p:has(> :nth-child(2)) > img {
+  width: calc(100% / 2 - 3px);
 }
 
-.gfm p:has(> :nth-child(3)) {
-  & > img {
-    width: calc(100% / 3 - 3px);
-  }
+.gfm p:has(> :nth-child(3)) > img {
+  width: calc(100% / 3 - 3px);
 }
 
-.gfm p:has(> :nth-child(4)) {
-  & > img {
-    width: calc(100% / 4 - 4px);
-  }
+.gfm p:has(> :nth-child(4)) > img {
+  width: calc(100% / 4 - 4px);
 }
 
 .gfm a {
-  /* Set color and underline for links */
   color: #0366d6;
   text-decoration: none;
 }
 .gfm a:hover {
-  /* Set hover color for links */
   color: #0366d6;
   text-decoration: underline;
 }
 .gfm ul,
 .gfm ol {
-  /* Set margin and padding for lists */
   margin-top: 0;
   margin-bottom: 1em;
   padding-left: 2em;
 }
 .gfm li {
-  /* Set margin for list items */
   margin-bottom: 0.5em;
 }
 .gfm code {
-  /* Set styles for inline code */
   background-color: #f6f8fa;
   border-radius: 3px;
   font-size: 0.9em;
   padding: 0.2em 0.4em;
 }
 .gfm pre {
-  /* Set styles for code blocks */
   background-color: #f6f8fa;
   border-radius: 3px;
   font-size: 0.9em;
@@ -127,9 +104,9 @@
   border-collapse: collapse;
 }
 
-.gfm table, th, td {
+.gfm table,
+.gfm th,
+.gfm td {
   height: 16px;
   border: 1px solid black;
 }
-
-

@@ -1,5 +1,5 @@
 import React, { InputHTMLAttributes } from "react";
-import './Input.scss';
+import './Input.css';
 
 /**
  * Input is a React component that renders an HTML input element with optional label and variant.

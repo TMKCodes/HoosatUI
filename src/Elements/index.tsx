@@ -24,7 +24,7 @@ import { Form } from './Form/Form/Form';
 import { Message } from './Message/Message';
 import { Modal, ModalBody, ModalFooter, ModalHeader } from './Modal';
 
-import "./index.scss"
+import "./index.css"
 
 export {
   Anchor,

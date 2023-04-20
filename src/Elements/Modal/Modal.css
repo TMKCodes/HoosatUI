@@ -1,7 +1,8 @@
-@import '../../theme';
+@import '../../theme.css';
 
 .ModalContainer {
-  background-color: lighten($secondary-color, 30%);
+  background-color: var(--secondary-color);
+  filter: brightness(0.99);
   position: fixed;
   top: 5%;
   left: 25%;

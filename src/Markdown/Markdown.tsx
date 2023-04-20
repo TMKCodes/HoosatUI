@@ -3,7 +3,7 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm'
 import rehypeHighlight from 'rehype-highlight'
 
-import "./Markdown.scss";
+import "./Markdown.css";
 import { ImageViewer } from '../ImageViewer/ImageViewer';
 
 interface MarkdownProps {

@@ -1,4 +1,4 @@
-@use '../../../theme' as theme;
+@import '../../../theme';
 
 .Video {
   width: 100%;

@@ -1,6 +1,6 @@
 import React, { TableHTMLAttributes, HTMLAttributes } from 'react';
 
-import './Table.scss';
+import './Table.css';
 
 interface TableProps extends TableHTMLAttributes<HTMLTableElement> {
 

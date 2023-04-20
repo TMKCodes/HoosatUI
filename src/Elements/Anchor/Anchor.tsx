@@ -1,5 +1,5 @@
 import React, { AnchorHTMLAttributes } from 'react';
-import './Anchor.scss';
+import './Anchor.css';
 
 /**
  * A styled anchor tag component.

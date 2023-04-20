@@ -1,5 +1,5 @@
 import React, { HTMLAttributes } from 'react';
-import './Paragraph.scss';
+import './Paragraph.css';
 
 /**
  * A styled Paragraph tag component.

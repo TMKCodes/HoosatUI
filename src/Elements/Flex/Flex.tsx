@@ -1,5 +1,5 @@
 import React, { HTMLAttributes } from 'react';
-import './Flex.scss';
+import './Flex.css';
 
 /**
  * @typedef {Object} FlexProps - Props for the Flex component

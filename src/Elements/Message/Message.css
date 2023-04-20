@@ -1,10 +1,13 @@
+@import '../../theme.css';
+
 .Message {
   background: #d2d5ff;
   color: #000;
   border-radius: 0.375rem;
-  & > p {
-    margin: 0px;
-  }
+}
+
+.Message > p {
+  margin: 0px;
 }
 
 .MessageTypeSuccess {

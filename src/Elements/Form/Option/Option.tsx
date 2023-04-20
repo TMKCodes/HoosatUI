@@ -1,5 +1,5 @@
 import React, { OptionHTMLAttributes } from "react";
-import './Option.scss';
+import './Option.css';
 
 /**
  * Option

@@ -2,7 +2,7 @@ import React, { InputHTMLAttributes, useState } from "react";
 import { Grid, Input, List, ListItem } from "../..";
 import { iconNames, Icons } from "../../../Icons/Icons";
 
-import './Combobox.scss';
+import './Combobox.css';
 
 /**
  * @typedef {Object} ComboboxProps - Props for Combobox component

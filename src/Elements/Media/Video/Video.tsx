@@ -1,5 +1,5 @@
 import React, { VideoHTMLAttributes } from 'react';
-import './Video.scss';
+import './Video.css';
 
 /**
  * A styled Video tag component.

@@ -1,7 +1,7 @@
 import React, { HTMLAttributes } from 'react';
 import { Flex } from '../..';
 
-import './ModalFooter.scss'
+import './ModalFooter.css'
 
 interface ModalFooterProps extends HTMLAttributes<HTMLDivElement> {
 }

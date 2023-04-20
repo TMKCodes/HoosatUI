@@ -1,5 +1,5 @@
 import React, { FormHTMLAttributes } from "react";
-import './Form.scss';
+import './Form.css';
 
 /**
  *  Form component is used to select an option from a list of options.

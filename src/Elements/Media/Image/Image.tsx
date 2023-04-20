@@ -1,5 +1,5 @@
 import React, { ImgHTMLAttributes, MapHTMLAttributes } from 'react';
-import './Image.scss';
+import './Image.css';
 
 /**
  * A styled Image tag component.

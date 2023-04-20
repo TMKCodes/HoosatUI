@@ -1,4 +1,4 @@
-@use '../../theme' as theme;
+@import '../../theme';
 
 .Grid {
   display: grid;
@@ -18,3 +18,4 @@
   grid-row-start: auto;
   grid-area: auto;
 }
+

@@ -1,12 +1,11 @@
-@use '../../../theme' as theme;
-
+@import '../../../theme.css';
 
 .ModalFooter {
   padding-bottom: 1rem;
   width: 100%;
   justify-content: flex-end !important;
+}
 
-  & > button {
-    width: 100%;
-  }
+.ModalFooter > button {
+  width: 100%;
 }

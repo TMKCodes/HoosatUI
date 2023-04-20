@@ -1,0 +1,12 @@
+@import '../../../theme';
+
+.Label {
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.Label:hover {
+  color: #737373;
+}
+

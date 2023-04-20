@@ -1,5 +1,5 @@
 import React, { TextareaHTMLAttributes } from "react";
-import './Textarea.scss';
+import './Textarea.css';
 
 /**
  *  Textarea component is used to select an option from a list of options.

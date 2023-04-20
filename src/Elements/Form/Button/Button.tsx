@@ -1,5 +1,5 @@
 import React, { ButtonHTMLAttributes } from 'react';
-import './Button.scss';
+import './Button.css';
 
 /**
  * Button component props.

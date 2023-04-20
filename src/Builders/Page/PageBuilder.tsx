@@ -1,7 +1,7 @@
 import React, { HTMLAttributes } from "react";
 import { Grid, GridItem } from "../../Elements";
 
-import './PageBuilder.scss'
+import './PageBuilder.css'
 
 interface PageProps extends HTMLAttributes<HTMLDivElement> {
   header?: JSX.Element | JSX.Element[];

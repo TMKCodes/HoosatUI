@@ -1,5 +1,5 @@
 import React, { AudioHTMLAttributes } from 'react';
-import './Audio.scss';
+import './Audio.css';
 
 /**
  * A styled Audio tag component.

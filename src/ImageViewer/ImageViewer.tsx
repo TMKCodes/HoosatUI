@@ -1,7 +1,7 @@
 import React, { ImgHTMLAttributes } from "react";
 import { Button, Image } from "../Elements";
 
-import "./ImageViewer.scss";
+import "./ImageViewer.css";
 
 interface ImageViewerProps extends ImgHTMLAttributes<HTMLImageElement> {
   onClose: () => void;

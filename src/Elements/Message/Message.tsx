@@ -2,7 +2,7 @@ import React, { HTMLAttributes } from "react";
 import { Grid } from "../Grid/Grid";
 import { Paragraph } from "../Text/Paragraph/Paragraph";
 
-import "./Message.scss"
+import "./Message.css"
 
 interface MessageType extends HTMLAttributes<HTMLDivElement> {
   // Own attributes

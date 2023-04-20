@@ -1,6 +1,6 @@
 import React, { SelectHTMLAttributes } from "react";
 import { Option } from '../..'
-import './Select.scss';
+import './Select.css';
 
 /**
  *  Select component is used to select an option from a list of options.
