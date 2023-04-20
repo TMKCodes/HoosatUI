@@ -2,7 +2,8 @@
 @import "./Flex/Flex.css";
 @import "./Form/Button/Button.css";
 @import "./Form/Combobox/Combobox.css";
-@import "./Form//Input/Input.css";
+@import "./Form/Form/Form.css";
+@import "./Form/Input/Input.css";
 @import "./Form/Option/Option.css";
 @import "./Form/Select/Select.css";
 @import "./Form/Textarea/Textarea.css";
@@ -12,8 +13,12 @@
 @import "./Media/Audio/Audio.css";
 @import "./Media/Image/Image.css";
 @import "./Media/Video/Video.css";
+@import "./Message/Message.css";
+@import "./Modal/Modal.css";
+@import "./Modal/Body/ModalBody.css";
+@import "./Modal/Footer/ModalFooter.css";
+@import "./Modal/Header/ModalHeader.css";
 @import "./Table/Table.css";
 @import "./Text/Heading/Heading.css";
 @import "./Text/Label/Label.css";
 @import "./Text/Paragraph/Paragraph.css";
-
