@@ -1,39 +1,82 @@
 # HoosatUI
 HoosatUI is a user interface library for React made with CSS styling that provides set of reusable UI components to quickly build beautiful and responsive user interfaces.
 
-## Installation
-You can install HoosatUI via npm:
+## React installation
+
+Create new React project.
 
 ```
-npm install @tonto/hoosat-ui
+npx create-react-app project_name --template typescript
 ```
 
-Or via git submodule:
-
-```
-git submodule add https://github.com/TMKCodes/HoosatUI
-```
-
-## Dependancies
-
-There are few dependancies, because of markdown support.
+Then you need to install few more dependancies to your React project since HoosatUI depends on react-markdown.
 
 1. react-markdown
 2. remark-gfm
 3. rehype-highlight
 
-You have to install them in your project to use HoosatUI.
+```
+npm install react-markdown remark-gfm rehype-highlight
+```
+
+Change directory to the React project src folder.
+```
+cd src
+```
+
+Install HoosatUI as git submodule in the src folder.
+
+```
+git submodule add https://github.com/hoosat-oy/HoosatUI
+```
+
+Then you can import HoosatUI components like this in your components.
+
+```
+import { Flex } from '../HoosatUI'; 
+```
+
+
+## Remix installation
+
+Create new Remix project.
+
+```
+npx create-remix@latest
+```
+
+Change directory to the remix project after the project has been created.
+
+```
+cd project_name
+```
+
+Initialize Git for the project, since Remix npx script does not do it.
+
+```
+git init
+```
+
+Then you need to install few more dependancies to your Remix project since HoosatUI depends on react-markdown.
+
+1. react-markdown
+2. remark-gfm
+3. rehype-highlight
 
 ```
 npm install react-markdown remark-gfm rehype-highlight
 ```
 
-## Remix support
+Change directory to Remix project /app folder then install HoosatUI as
+git submodule.
 
-We moved from Tailwind to SASS and then to CSS to get Remix support.
+```
+cd app && git submodule add https://github.com/hoosat-oy/HoosatUI
+```
 
-Since there is problem with ESM only packages in Remix. You have
-to modify remix.config.js to include serverDependanciesToBundle
+Since Remix has ESM only package problem and there is no other good solution, we must include everything to in the bundle.
+
+So include serverDependanciesBundle in remix.config.js
 
 ```
 module.exports = {
@@ -41,9 +84,14 @@ module.exports = {
 }
 ```
 
-Another thing since Remix uses different way of importing CSS to
-React you have to import HoosatUI/index.css in routes where you
-use HoosatUI.
+Then you can import HoosatUI components like this
+
+```
+import { Flex } from '../HoosatUI'; 
+```
+
+To use HoosatUI CSS you also must include Hoosat CSS in Remix
+route components
 
 ```
 import HoosatUICSS from '../HoosatUI/index.css';
@@ -53,6 +101,7 @@ export const links: LinksFunction = () => {
   ]
 }
 ```
+
 
 ## Usage
 Import any component from HoosatUI and use it in your React application:
