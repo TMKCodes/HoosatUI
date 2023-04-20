@@ -4,7 +4,7 @@ import { ModalBody } from "./Body/ModalBody"
 import { ModalFooter } from "./Footer/ModalFooter"
 import { ModalHeader } from "./Header/ModalHeader"
 
-import "./Modal.scss"
+import "./Modal.css"
 
 interface ModalProps extends HTMLAttributes<HTMLDivElement> {
 }

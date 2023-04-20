@@ -1,7 +1,7 @@
-@use '../../theme' as theme;
+@import '../../theme';
 
 .ModalContainer {
-  background-color: lighten(theme.$secondary-color, 30%);
+  background-color: lighten($secondary-color, 30%);
   position: fixed;
   top: 5%;
   left: 25%;
