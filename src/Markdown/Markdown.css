@@ -4,7 +4,7 @@
   white-space: normal !important;
   word-wrap: normal !important;
   line-height: 1.6;
-  color: var(--text-color-dark);
+  color: var(--text-color-mix);
 }
 
 .gfm h1,

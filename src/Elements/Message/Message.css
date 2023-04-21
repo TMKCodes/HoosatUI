@@ -10,15 +10,15 @@
 
 .MessageTypeSuccess {
   background-color: var(--secondary-color);
-  color: var(--text-color-dark);
+  color: var(--text-color-mix);
 }
 
 .MessageTypeError {
   background-color: var(--secondary-color-dark);
-  color: var(--text-color);
+  color: var(--text-color-mix);
 }
 
 .MessageTypeInfo {
   background-color: var(--secondary-color);
-  color: var(--text-color-dark);
+  color: var(--text-color-mix);
 }

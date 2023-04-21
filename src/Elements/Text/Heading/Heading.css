@@ -5,7 +5,7 @@
   padding: 0.5rem 1rem;
   font-size: 1rem;
   line-height: 1.5rem;
-  color: var(--text-color-dark);
+  color: var(--text-color-mix);
 }
 .Heading.h1 {
   font-size: 1.75rem;
@@ -26,6 +26,6 @@
   font-size: 0.5rem;
 }
 .Heading:hover {
-  color: var(--text-color-dark);
+  color: var(--text-color-mix);
 }
 

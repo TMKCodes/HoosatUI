@@ -5,9 +5,9 @@
   padding: 0.5rem 1rem;
   font-size: 1rem;
   line-height: 1.5rem;
-  color: var(--text-color-dark);
+  color: var(--text-color-mix);
 }
 .Label:hover {
-  color: var(--text-color-dark);
+  color: var(--text-color-mix);
 }
 
