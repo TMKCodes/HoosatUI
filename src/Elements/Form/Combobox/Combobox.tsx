@@ -90,14 +90,14 @@ export const Combobox: React.FC<ComboboxProps> = ({
     <div {...rest} className={`Container ${(rest.className !== undefined) ? rest.className : ""}`}>
       <Input className="InputOverwrite"
         label={ (rest !== undefined && rest.label !== undefined) ? rest.label : "" } 
-        rest-testid="combobox-input" id={(rest !== undefined && rest.id !== undefined) ? rest.id : ""}
+        data-testid="combobox-input" id={(rest !== undefined && rest.id !== undefined) ? rest.id : ""}
         type="text"
         value={searchText}
         onClick={handleClick}
         onChange={handleInput}>
       </Input>
       {showResults && (
-        <Grid className="OptionContainer" rest-testid="combobox-option-container">
+        <Grid className="OptionContainer" data-testid="combobox-option-container">
           <List marker="none" style={{ padding: "0px"}}>
             {filteredOptions().map((option, index) => {
               return (result.includes(option)) 

@@ -21,7 +21,7 @@ export default {
     "^.+\\.tsx?$": "ts-jest"
   },
   moduleNameMapper: {
-    "\\.(scss)$": "identity-obj-proxy"
+    "\\.(scss|sass|css)$": "identity-obj-proxy"
   },
   setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],
 };

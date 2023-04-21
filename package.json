@@ -55,5 +55,10 @@
   },
   "files": [
     "/lib"
-  ]
+  ],
+  "dependencies": {
+    "react-markdown": "^8.0.7",
+    "rehype-highlight": "^6.0.0",
+    "remark-gfm": "^3.0.1"
+  }
 }
