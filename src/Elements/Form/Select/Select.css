@@ -9,44 +9,45 @@
   border-radius: 0.375rem;
   transition: all 150ms ease-in-out;
   cursor: pointer;
+  border-color: var(--border-color);
 }
 .Select.primary {
-  background-color: rgb(217, 217, 217);
+  background-color: var(--primary-color);
   color: #1a1a1a;
 }
 .Select.primary:hover {
-  background-color: ligthen(rgb(217, 217, 217), 30%);
+  background-color: var(--primary-color-light);
   outline: none;
   box-shadow: 0 0 0 3px rgba(141, 141, 141, 0.5);
-  border-color: rgb(114, 113, 113);
+  border-color: var(--border-color);
 }
 .Select.primary:focus {
   outline: none;
   box-shadow: 0 0 0 3px rgba(141, 141, 141, 0.5);
-  border-color: rgb(114, 113, 113);
+  border-color: var(--border-color);
 }
 .Select.primary:active {
-  background-color: #8d8d8d;
-  border-color: rgb(114, 113, 113);
+  background-color: var(--primary-color-light);;
+  border-color: var(--border-color);
 }
 .Select.secondary {
-  background-color: rgb(38, 38, 38);
-  color: rgb(229, 229, 229);
+  background-color: var(--secondary-color);
+  color: var(--text-color);
 }
 .Select.secondary:hover {
-  background-color: #191919;
+  background-color: var(--secondary-color-light);
   outline: none;
   box-shadow: 0 0 0 3px rgba(141, 141, 141, 0.5);
-  border-color: rgb(114, 113, 113);
+  border-color: var(--border-color);
 }
 .Select.secondary:focus {
   outline: none;
   box-shadow: 0 0 0 3px rgba(141, 141, 141, 0.5);
-  border-color: rgb(114, 113, 113);
+  border-color: var(--border-color);
 }
 .Select.secondary:active {
-  background-color: #191919;
-  border-color: rgb(114, 113, 113);
+  background-color: var(--secondary-color-light);
+  border-color: var(--border-color);
 }
 .Select[disabled] {
   opacity: 0.5;

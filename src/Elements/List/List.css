@@ -15,5 +15,5 @@
   line-height: 1.5rem;
 }
 .ListItem:hover {
-  color: #737373;
+  color: var(--focus-color);
 }

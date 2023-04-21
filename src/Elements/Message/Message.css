@@ -1,8 +1,6 @@
 @import '../../theme.css';
 
 .Message {
-  background: #d2d5ff;
-  color: #000;
   border-radius: 0.375rem;
 }
 
@@ -11,16 +9,16 @@
 }
 
 .MessageTypeSuccess {
-  background: #8effa7;
-  color: #000;
+  background-color: var(--secondary-color);
+  color: var(--text-color-dark);
 }
 
 .MessageTypeError {
-  background: #5e1d21;
-  color: #fff;
+  background-color: var(--secondary-color-dark);
+  color: var(--text-color);
 }
 
 .MessageTypeInfo {
-  background: #4fcdff;
-  color: #fff;
+  background-color: var(--secondary-color);
+  color: var(--text-color-dark);
 }

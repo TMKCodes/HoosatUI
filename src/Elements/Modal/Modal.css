@@ -2,7 +2,6 @@
 
 .ModalContainer {
   background-color: var(--secondary-color);
-  filter: brightness(0.99);
   position: fixed;
   top: 5%;
   left: 25%;

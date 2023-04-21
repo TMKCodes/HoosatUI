@@ -1,8 +1,10 @@
+@import "../theme.css";
+
 .gfm {
   white-space: normal !important;
   word-wrap: normal !important;
   line-height: 1.6;
-  color: #000000;
+  color: var(--text-color-dark);
 }
 
 .gfm h1,
