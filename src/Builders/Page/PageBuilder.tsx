@@ -6,7 +6,7 @@ import './PageBuilder.css'
 interface PageProps extends HTMLAttributes<HTMLDivElement> {
   header?: JSX.Element | JSX.Element[];
   navigation?: JSX.Element | JSX.Element[];
-  content?: JSX.Element | JSX.Element[];
+  body?: JSX.Element | JSX.Element[];
   sidebar?: JSX.Element | JSX.Element[];
   footer?: JSX.Element | JSX.Element[];
 }
@@ -28,9 +28,9 @@ export const PageBuilder: React.FC<PageProps> = ({
           {rest.navigation}
         </GridItem>
       }
-      { (rest.content !== undefined) && 
+      { (rest.body !== undefined) && 
         <GridItem className="content">
-          {rest.content}
+          {rest.body}
         </GridItem>
       }
       { (rest.sidebar !== undefined) && 
