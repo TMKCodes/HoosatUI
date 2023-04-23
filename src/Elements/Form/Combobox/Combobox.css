@@ -61,9 +61,16 @@
   font-size: 0.875rem;
   line-height: 1.25rem;
   border-radius: 0.375rem;
+  border: 1px solid var(--border-color);
 }
+.OptionContainer > ul {
+  padding: 0px;
+  margin: 0px;
+}
+
 .OptionContainer > ul > li {
-  padding: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 .OptionContainer > ul > li:hover {
   background-color: var(--primary-color-light);
