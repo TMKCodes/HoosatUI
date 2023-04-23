@@ -1,5 +1,5 @@
 import React, { FormHTMLAttributes } from "react";
-import { Button, Combobox, Form, Grid, Heading, Input, Select, Textarea } from "../../Elements";
+import { Button, Combobox, Form, Grid, Heading, Input, Message, Select, Textarea } from "../../Elements";
 
 interface FormInputProps {
   itype: string,
@@ -37,6 +37,8 @@ export const FormBuilder: React.FC<FormProps> = ({
         return <Button key={`${input.id}`} {...input}>{input.children}</Button>
       case "textarea":
         return <Textarea key={`${input.id}`} {...input}>{input.children}</Textarea>
+      case "message": 
+        return <Message key={`${input.id}`} message={input.message} type={input.type} {...input}></Message>
       default:
         return <></>
     }
