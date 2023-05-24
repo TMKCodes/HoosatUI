@@ -38,6 +38,7 @@ import {
   ModalFooter, 
   ModalHeader,
   Icons,
+  iconNames,
   Markdown,
 } from './src/';
 
@@ -83,6 +84,7 @@ export {
   PageBuilder,
 
   Icons,
+  iconNames,
 
   Markdown,
 }

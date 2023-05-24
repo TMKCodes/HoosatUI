@@ -10,7 +10,8 @@ import {
 } from './Markdown/Markdown';
 
 import {
-  Icons
+  Icons,
+  iconNames
 } from './Icons/Icons';
 
 import { 
@@ -92,6 +93,7 @@ export {
   PageBuilder,
 
   Icons,
+  iconNames,
 
   Markdown,
 }
