@@ -37,7 +37,7 @@ import {
   ModalBody, 
   ModalFooter, 
   ModalHeader,
-  Icons,
+  Icon,
   iconNames,
   Markdown,
 } from './src/';
@@ -83,7 +83,7 @@ export {
   InputBuilder,
   PageBuilder,
 
-  Icons,
+  Icon,
   iconNames,
 
   Markdown,
