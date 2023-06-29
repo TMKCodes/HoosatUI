@@ -18,31 +18,11 @@ export const PageBuilder: React.FC<PageProps> = ({
 }) => {
   return (
     <Grid {...rest} className={`pagebuilder ${rest.className}`}>
-      { (rest.header !== undefined) && 
-        <GridItem className="header">
-          {rest.header}
-        </GridItem>
-      }
-      { (rest.navigation !== undefined) && 
-        <GridItem className="navigation">
-          {rest.navigation}
-        </GridItem>
-      }
-      { (rest.body !== undefined) && 
-        <GridItem className="content">
-          {rest.body}
-        </GridItem>
-      }
-      { (rest.sidebar !== undefined) && 
-        <GridItem className="sidebar">
-          {rest.sidebar}
-        </GridItem>
-      }
-      { (rest.footer !== undefined) && 
-        <GridItem className="footer">
-          {rest.footer}
-        </GridItem>
-      }
+      { rest.header && <GridItem className="header">{rest.header}</GridItem> }
+      { rest.navigation && <GridItem className="navigation">{rest.navigation}</GridItem> }
+      { rest.body && <GridItem className="content">{rest.body}</GridItem> }
+      { rest.sidebar && <GridItem className="sidebar">{rest.sidebar}</GridItem> }
+      { rest.footer && <GridItem className="footer">{rest.footer}</GridItem> }
     </Grid>
   );
 };
