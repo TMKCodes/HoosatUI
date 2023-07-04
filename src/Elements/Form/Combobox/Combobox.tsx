@@ -94,7 +94,8 @@ export const Combobox: React.FC<ComboboxProps> = ({
         type="text"
         value={searchText}
         onClick={handleClick}
-        onChange={handleInput}>
+        onChange={handleInput}
+        autoComplete="off">
       </Input>
       {showResults && (
         <Grid className="OptionContainer" data-testid="combobox-option-container">
