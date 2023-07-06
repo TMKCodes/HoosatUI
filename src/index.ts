@@ -14,6 +14,10 @@ import {
   iconNames
 } from './Icons/Icons';
 
+import {
+  ImageViewer
+} from './ImageViewer/ImageViewer';
+
 import { 
   Anchor,
   Area,
@@ -96,4 +100,5 @@ export {
   iconNames,
 
   Markdown,
+  ImageViewer,
 }

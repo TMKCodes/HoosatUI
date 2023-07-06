@@ -40,6 +40,7 @@ import {
   Icon,
   iconNames,
   Markdown,
+  ImageViewer
 } from './src/';
 
 export {
@@ -87,4 +88,5 @@ export {
   iconNames,
 
   Markdown,
+  ImageViewer
 }
