@@ -18,6 +18,35 @@ interface showImageDTO {
 
 export const Markdown: React.FC<MarkdownProps> = (rest) => {
   const [showImage, setShowImage] = useState<showImageDTO>({ src: undefined, alt: undefined});
+
+  const getParameter = (parameter: string, src: string): string => {
+    const parts = src.split('|');
+    for (const part of parts) {
+      const splitted = part.split('=');
+      if (splitted.length === 2 && splitted[0] === parameter) {
+        return splitted[1];
+      }
+    }
+    return "";
+  }
+
+  const ImgStyles = (src: string | undefined) =>  {
+    src = decodeURIComponent(src!);
+    console.log(src);
+    if (src && src.includes("|")) {
+      const newsrc = src.split("|")[0];
+      console.log(newsrc)
+      const style = {
+        maxWidth: getParameter("width", src),
+        maxHeight: getParameter("height", src),
+      }
+      console.log(style);
+      return { src: newsrc, style: style};
+    } else {
+      return { src: src, style: {}}
+    }
+  }
+
   return (
     <>
       { (showImage.src !== undefined) && 
@@ -42,33 +71,14 @@ export const Markdown: React.FC<MarkdownProps> = (rest) => {
             );
           },
           img: ({ node, className, children, ...props }) => {
-            console.log(props.src);
-            const srcSplit = props.src?.split("%7Cdimensions=");
-            console.log("img srcSplit:" + srcSplit?.length);
-            if (srcSplit && srcSplit.length > 1) {
-              console.log("srcSplit[0]: " + srcSplit[0]);
-              props.src = srcSplit[0]; 
-              console.log(srcSplit[1]);
-              const width = srcSplit[1].split("x")[0];
-              const height = srcSplit[1].split("x")[1];
-              console.log(width);
-              console.log(height);
-              return (  
-                <img {...props} src={props.src} alt={props.alt} className={className} style={{ maxWidth: width + "px", maxHeight: height + "px" }} onClick={() => {
-                    setShowImage({ ...showImage, src: props.src, alt: props.alt });
-                  }}>
-                  {children}
-                </img>
-              );
-            } else {
-              return (  
-                <img {...props} src={props.src} alt={props.alt} className={className} onClick={() => {
-                    setShowImage({ ...showImage, src: props.src, alt: props.alt });
-                  }}>
-                  {children}
-                </img>
-              );
-            }
+            const { src, style } = ImgStyles(props.src);
+            return (
+              <img {...props} src={src} alt={props.alt} className={className} style={style} onClick={() => {
+                  setShowImage({ ...showImage, src: src, alt: props.alt });
+                }}>
+                {children}
+              </img>
+            );
           },
         }}
         >
