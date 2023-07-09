@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 
 interface IconProps {
   name: string;
@@ -10,19 +10,17 @@ interface IconProps {
 export const Icon: React.FC<IconProps> = ({ name, className, style }) => {
   const icon = Icons.find((icon) => icon.name === name);
 
-  if (!icon) {
-    console.error(`Icon "${name}" not found.`);
-    return null;
-  }
+  
 
-  const svgRef = React.useRef<SVGSVGElement>(null);
+  const svgRef = useRef<SVGSVGElement | null>(null);
 
-  React.useEffect(() => {
-    if (svgRef.current) {
-      svgRef.current.innerHTML = icon.content;
+  useEffect(() => {
+    if (svgRef.current && icon?.content) {
+      svgRef.current.innerHTML = icon?.content;
     }
-  }, [icon.content]);
+  }, [icon?.content]);
 
+  
   return (
     <svg
       ref={svgRef}
@@ -32,6 +30,7 @@ export const Icon: React.FC<IconProps> = ({ name, className, style }) => {
     />
   );
 };
+
 
 
 export const iconNames = [
