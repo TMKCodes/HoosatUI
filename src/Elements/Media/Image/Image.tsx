@@ -19,6 +19,8 @@ interface ImageMapProps extends MapHTMLAttributes<HTMLMapElement> {
 
 }
 
+
+
 /**
  * Image component
  * @param {ImageProps} props - Props for the Image component
@@ -28,10 +30,16 @@ export const Image: React.FC<ImageProps> = ({
   children,
   ...rest
 }) => {
+  
   return (
-    <img {...rest} className={`Image ${(rest.className !== undefined) ? rest.className : ""}`} alt={(rest.alt !== undefined) ? rest.alt : 'alt missing, not erroring'}/>
+      <img
+        {...rest}
+        className={`Image ${(rest.className !== undefined) ? rest.className : ""}`}
+        alt={(rest.alt !== undefined) ? rest.alt : 'alt missing, not erroring'}
+        loading='lazy'
+      />
   );
-}
+};
 
 /**
  * ImageMap component
