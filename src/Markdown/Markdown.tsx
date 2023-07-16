@@ -36,15 +36,12 @@ export const Markdown: React.FC<MarkdownProps> = (rest) => {
 
   const ImgStyles = (src: string | undefined) =>  {
     src = decodeURIComponent(src!);
-    console.log(src);
     if (src && src.includes("|")) {
       const newsrc = src.split("|")[0];
-      console.log(newsrc)
       const style = {
         maxWidth: getParameter("width", src),
         maxHeight: getParameter("height", src),
       }
-      console.log(style);
       return { src: newsrc, style: style};
     } else {
       return { src: src, style: {}}
