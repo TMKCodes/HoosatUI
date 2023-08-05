@@ -1,9 +1,10 @@
-import React, { HTMLAttributes } from 'react';
+import React, { HTMLAttributes, ReactNode } from 'react';
 import { Flex } from '../..';
 
 import './ModalFooter.css'
 
 interface ModalFooterProps extends HTMLAttributes<HTMLDivElement> {
+  children?: ReactNode;
 }
 
 export const ModalFooter: React.FC<ModalFooterProps> = ({

@@ -7,7 +7,7 @@ import './Grid.css';
  * @extends HTMLAttributes<HTMLDivElement>
  */
 interface GridProps extends HTMLAttributes<HTMLDivElement>{
-  children: ReactNode;
+  children?: ReactNode | ReactNode[];
 }
 
 /**
@@ -16,7 +16,7 @@ interface GridProps extends HTMLAttributes<HTMLDivElement>{
  * @extends HTMLAttributes<HTMLDivElement>
  */
 interface GridItemProps extends HTMLAttributes<HTMLDivElement>{
-  children: ReactNode;
+  children?: ReactNode;
 }
 
 /**

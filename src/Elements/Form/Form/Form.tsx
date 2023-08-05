@@ -1,4 +1,4 @@
-import React, { FormHTMLAttributes } from "react";
+import React, { FormHTMLAttributes, ReactNode } from "react";
 import './Form.css';
 
 /**
@@ -9,6 +9,7 @@ import './Form.css';
  *  @param {string} [props.label] - Label of the select element.
  */
 interface FormProps extends FormHTMLAttributes<HTMLFormElement> {
+  children?: ReactNode;
   variant?: 'primary' | 'secondary';
 }
 

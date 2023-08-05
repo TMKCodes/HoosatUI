@@ -1,4 +1,4 @@
-import React, { FormHTMLAttributes } from "react";
+import React, { FormHTMLAttributes, ReactNode } from "react";
 import { Button, Combobox, Form, Grid, Heading, Input, Message, Select, Textarea } from "../../Elements";
 
 interface FormInputProps {
@@ -7,6 +7,7 @@ interface FormInputProps {
 }
 
 interface FormProps extends FormHTMLAttributes<HTMLFormElement> {
+  children?: ReactNode | ReactNode[];
   submitbuttontext: string | undefined, 
   header?: string,
   inputs: FormInputProps[], 

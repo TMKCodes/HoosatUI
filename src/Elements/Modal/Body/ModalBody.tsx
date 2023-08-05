@@ -1,9 +1,10 @@
-import React, { HTMLAttributes } from 'react';
+import React, { HTMLAttributes, ReactNode } from 'react';
 import { Grid } from '../..';
 
 import "./ModalBody.css";
 
 interface ModalBodyProps extends HTMLAttributes<HTMLDivElement> {
+  children?: ReactNode;
 }
 
 export const ModalBody: React.FC<ModalBodyProps> = ({

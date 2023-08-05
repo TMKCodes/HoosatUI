@@ -1,4 +1,4 @@
-import React, { HTMLAttributes } from 'react';
+import React, { HTMLAttributes, ReactNode } from 'react';
 import { Flex, Grid } from '..';
 import { ModalBody } from "./Body/ModalBody"
 import { ModalFooter } from "./Footer/ModalFooter"
@@ -7,6 +7,7 @@ import { ModalHeader } from "./Header/ModalHeader"
 import "./Modal.css"
 
 interface ModalProps extends HTMLAttributes<HTMLDivElement> {
+  children?: ReactNode;
 }
 
 export const Modal: React.FC<ModalProps> = ({

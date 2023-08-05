@@ -1,9 +1,10 @@
-import React, { HTMLAttributes } from 'react';
+import React, { HTMLAttributes, ReactNode } from 'react';
 import { Button, Flex, Heading } from '../..';
 
 import "./ModalHeader.css"
 
 interface ModalHeaderProps extends HTMLAttributes<HTMLDivElement | HTMLButtonElement> {
+  children?: ReactNode;
   header?: string;
   onClick?: React.MouseEventHandler<HTMLButtonElement> | undefined
 }

@@ -1,4 +1,4 @@
-import React, { HTMLAttributes } from 'react';
+import React, { HTMLAttributes, ReactNode } from 'react';
 import './Flex.css';
 
 /**
@@ -6,7 +6,7 @@ import './Flex.css';
  * @extends HTMLAttributes<HTMLDivElement>
  */
 interface FlexProps extends HTMLAttributes<HTMLDivElement> {
-
+  children?: ReactNode;
 }
 
 /**
@@ -14,7 +14,7 @@ interface FlexProps extends HTMLAttributes<HTMLDivElement> {
  * @extends HTMLAttributes<HTMLDivElement>
  */
 interface FlexItemProps extends HTMLAttributes<HTMLDivElement> {
-
+  children?: ReactNode;
 }
 
 /**
@@ -25,7 +25,7 @@ interface FlexItemProps extends HTMLAttributes<HTMLDivElement> {
 export const Flex: React.FC<FlexProps> = ({
   children,
   ...rest
-}) => {
+}: FlexProps): React.ReactElement => {
   return (
     <div {...rest} className={`Flex ${(rest.className !== undefined) ? rest.className : ""}`} >{ children }</div>
   );
@@ -39,7 +39,7 @@ export const Flex: React.FC<FlexProps> = ({
 export const FlexItem: React.FC<FlexItemProps> = ({
   children,
   ...rest
-}) => {
+}: FlexItemProps): React.ReactElement => {
   return (
     <div {...rest} className={`FlexItem ${(rest.className !== undefined) ? rest.className : ""}`} >{ children }</div>
   );
