@@ -1,4 +1,4 @@
-import React, { HTMLAttributes } from 'react';
+import React, { HTMLAttributes, ReactNode } from 'react';
 import './Grid.css';
 
 /**
@@ -7,7 +7,7 @@ import './Grid.css';
  * @extends HTMLAttributes<HTMLDivElement>
  */
 interface GridProps extends HTMLAttributes<HTMLDivElement>{
-
+  children: ReactNode;
 }
 
 /**
@@ -16,7 +16,7 @@ interface GridProps extends HTMLAttributes<HTMLDivElement>{
  * @extends HTMLAttributes<HTMLDivElement>
  */
 interface GridItemProps extends HTMLAttributes<HTMLDivElement>{
-
+  children: ReactNode;
 }
 
 /**
@@ -27,7 +27,7 @@ interface GridItemProps extends HTMLAttributes<HTMLDivElement>{
 export const Grid: React.FC<GridProps> = ({
   children,
   ...rest
-}) => {
+}: GridProps): React.ReactElement => {
   return (
     <div {...rest} className={`Grid ${(rest.className !== undefined) ? rest.className : ""}`} >{ children }</div>
   );
@@ -41,7 +41,7 @@ export const Grid: React.FC<GridProps> = ({
 export const GridItem: React.FC<GridItemProps> = ({
   children,
   ...rest
-}) => {
+}: GridItemProps): React.ReactElement => {
   return (
     <div {...rest} className={`GridItem ${(rest.className !== undefined) ? rest.className : ""}`} >{ children }</div>
   );
