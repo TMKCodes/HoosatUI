@@ -3,6 +3,9 @@ const path = require('path');
 
 function getIconNames() {
   const iconsFolder = './zondicons';
+  if(iconsFolder === undefined) {
+    return;
+  }
   const iconFiles = fs.readdirSync(iconsFolder);
 
   // Filter the SVG files and extract the icon names
