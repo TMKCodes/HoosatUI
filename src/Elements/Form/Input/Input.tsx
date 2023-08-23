@@ -24,7 +24,7 @@ export const Input: React.FC<InputProps> = ({
   children,
   variant = 'primary',
   ...rest
-}) => {
+}: InputProps): JSX.Element => {
   return (
     <>
       { (rest.label !== undefined) &&

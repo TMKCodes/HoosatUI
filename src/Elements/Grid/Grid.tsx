@@ -16,7 +16,7 @@ interface GridProps extends HTMLAttributes<HTMLDivElement>{
  * @extends HTMLAttributes<HTMLDivElement>
  */
 interface GridItemProps extends HTMLAttributes<HTMLDivElement>{
-  children?: ReactNode;
+  children?: ReactNode | ReactNode[];
 }
 
 /**

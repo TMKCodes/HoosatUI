@@ -3,7 +3,7 @@ import { Table, TBody, Td, Th, THead, Tr } from "../../Elements";
 
 interface TableInputProps extends TableHTMLAttributes<HTMLTableRowElement> {
   _id: string,
-  selected: boolean,
+  color: string,
   data: Object,
 }
 
@@ -29,7 +29,7 @@ export const TableBuilder: React.FC<TableProps> = ({
       <TBody>
         { rest.rows.map(row => (
           <Tr key={"tr-" + String(row._id)}
-            style={{ background: (row.selected === true) ? "white" : "" }}
+            style={{ background: (row.color !== undefined) ? row.color : "" }}
             onClick={(e) => (row.onClick !== undefined) && row.onClick(e) }>
             { Object.entries(row.data).map(cell => (
               <Td key={"td-" + String(cell[0])}>{cell[1]}</Td>

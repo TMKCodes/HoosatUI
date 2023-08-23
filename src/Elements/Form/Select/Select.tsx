@@ -25,7 +25,7 @@ export const Select: React.FC<SelectProps> = ({
   children,
   variant = 'primary',
   ...rest
-}) => {
+}: SelectProps): JSX.Element => {
   return (
     <>
       { (rest.label !== undefined) &&
@@ -39,7 +39,7 @@ export const Select: React.FC<SelectProps> = ({
         className={`Select ${variant} ${(rest.className !== undefined) ? rest.className : ""}`}>
         <>
           { rest.options?.map((option) => (
-              <Option>{option}</Option>
+              <Option key={option}>{option}</Option>
             ))
           }
           {children}
