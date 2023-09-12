@@ -330,7 +330,9 @@ export const iconNames = [
   "wrench",
   "yin-yang",
   "zoom-in",
-  "zoom-out"
+  "zoom-out",
+  "logout",
+  "login"
 ];
 
 export const Icons = [
@@ -1818,5 +1820,15 @@ export const Icons = [
     "name": "zoom-out",
     "filename": "zoom-out.svg",
     "content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\"><path fill-rule=\"evenodd\" d=\"M12.9 14.32a8 8 0 1 1 1.41-1.41l5.35 5.33-1.42 1.42-5.33-5.34zM8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12zM5 7h6v2H5V7z\"/></svg>"
+  },
+  {
+    "name": "logout",
+    "filename": "logout.svg",
+    "content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\"><path fill-rule=\"evenodd\" d=\"M12.293 13.293a1 1 0 0 1-1.414 1.414l-4-4a1 1 0 0 1 1.414-1.414L8 10.586V5a1 1 0 1 1 2 0v5.586l1.293-1.293a1 1 0 0 1 1.414 1.414l-4 4z\"/></svg>"
+  },
+  {
+    "name": "login",
+    "filename": "login.svg",
+    "content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\"><path fill-rule=\"evenodd\" d=\"M12.293 14.293a1 1 0 0 1-1.414-1.414L13.586 10H5a1 1 0 1 1 0-2h8.586l-2.707-2.293a1 1 0 1 1 1.414-1.414l4 4a1 1 0 0 1 0 1.414l-4 4z\"/></svg>"
   }
 ]
