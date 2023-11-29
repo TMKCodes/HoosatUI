@@ -5,6 +5,7 @@
   "main": "./lib/cjs/index.js",
   "module": "./lib/esm/index.js",
   "types": "./lib/esm/index.d.ts",
+  "type": "module",
   "scripts": {
     "build": "npm run build-esm && npm run build-cjs",
     "build-esm": "tsc && npm run copy-files",
