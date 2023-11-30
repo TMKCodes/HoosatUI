@@ -8,25 +8,13 @@ interface IconProps {
 
 
 export const Icon: React.FC<IconProps> = ({ name, className, style }) => {
-  const icon = Icons.find((icon) => icon.name === name);
-
-  
-
-  const svgRef = useRef<SVGSVGElement | null>(null);
-
-  useEffect(() => {
-    if (svgRef.current && icon?.content) {
-      svgRef.current.innerHTML = icon?.content;
-    }
-  }, [icon?.content]);
-
-  
+  const icon = Icons.find((icon) => icon.name === name)!;
   return (
     <svg
-      ref={svgRef}
       className={className}
       style={style}
       xmlns="http://www.w3.org/2000/svg"
+      dangerouslySetInnerHTML={{ __html: icon.content }}
     />
   );
 };
