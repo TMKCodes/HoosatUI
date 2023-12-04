@@ -25,21 +25,41 @@ export const Input: React.FC<InputProps> = ({
   variant = 'primary',
   ...rest
 }: InputProps): JSX.Element => {
-  return (
-    <>
-      { (rest.label !== undefined) &&
-        <label htmlFor={(rest.id !== undefined) ? rest.id : rest.label} className={`InputLabel`}>
-          {rest.label}
-        </label>
-      }
-      <input
-        {...rest}
-        id={(rest.id !== undefined) ? rest.id : rest.label }
-        className={`Input ${variant} ${(rest.className !== undefined) ? rest.className : ""}`}
-        style={{...rest.style}}
-        >
-        {children}
-      </input>
-    </>
-  );
+  if (rest.type === "checkbox") {
+    return (
+      <div className="CheckboxContainer">
+        <input
+          {...rest}
+          id={(rest.id !== undefined) ? rest.id : rest.label }
+          className={`Checkbox ${variant} ${(rest.className !== undefined) ? rest.className : ""}`}
+          style={{...rest.style}}
+          >
+          {children}
+        </input>
+        { (rest.label !== undefined) &&
+          <label htmlFor={(rest.id !== undefined) ? rest.id : rest.label} className={`CheckboxLabel`}>
+            {rest.label}
+          </label>
+        }
+      </div>
+    );
+  } else {
+    return (
+      <>
+        { (rest.label !== undefined) &&
+          <label htmlFor={(rest.id !== undefined) ? rest.id : rest.label} className={`InputLabel`}>
+            {rest.label}
+          </label>
+        }
+        <input
+          {...rest}
+          id={(rest.id !== undefined) ? rest.id : rest.label }
+          className={`Input ${variant} ${(rest.className !== undefined) ? rest.className : ""}`}
+          style={{...rest.style}}
+          >
+          {children}
+        </input>
+      </>
+    );
+  }
 };
