@@ -2,6 +2,7 @@ import React, { HTMLAttributes, HTMLInputTypeAttribute } from "react";
 import { Input } from '../../Elements';
 
 interface InputProps extends HTMLAttributes<HTMLInputElement>{
+  placeholder: string | undefined;
   label: string | undefined;
   type: HTMLInputTypeAttribute | undefined;
   value: string | number | readonly string[] | undefined;
