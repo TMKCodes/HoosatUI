@@ -9,6 +9,7 @@ interface FormInputProps {
 interface FormProps extends FormHTMLAttributes<HTMLFormElement> {
   children?: ReactNode | ReactNode[];
   submitbuttontext: string | undefined, 
+  submitbuttonid?: string | undefined, 
   header?: string,
   inputs: FormInputProps[], 
   onSubmit(value: React.BaseSyntheticEvent): void,
@@ -53,7 +54,7 @@ export const FormBuilder: React.FC<FormProps> = ({
             getElementByInput(input) 
           ))}
           { children }
-          <Button style={{ width: "100%" }} onClick={(e) => { e.preventDefault(); rest.onSubmit(e); }}>
+          <Button id={rest.submitbuttonid} style={{ width: "100%" }} onClick={(e) => { e.preventDefault(); rest.onSubmit(e); }}>
             {(rest.submitbuttontext !== undefined) ? rest.submitbuttontext : "Send" }
           </Button>
         </Grid>
