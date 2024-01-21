@@ -1,4 +1,4 @@
-import React, { ImgHTMLAttributes, MapHTMLAttributes } from 'react';
+import React, { ImgHTMLAttributes, MapHTMLAttributes, useEffect } from 'react';
 import './Image.css';
 
 /**
@@ -19,8 +19,6 @@ interface ImageMapProps extends MapHTMLAttributes<HTMLMapElement> {
 
 }
 
-
-
 /**
  * Image component
  * @param {ImageProps} props - Props for the Image component
@@ -29,15 +27,14 @@ interface ImageMapProps extends MapHTMLAttributes<HTMLMapElement> {
 export const Image: React.FC<ImageProps> = ({
   children,
   ...rest
-}) => {
-  
+}: ImageProps): React.ReactElement => {
   return (
-      <img
-        {...rest}
-        className={`Image ${(rest.className !== undefined) ? rest.className : ""}`}
-        alt={(rest.alt !== undefined) ? rest.alt : 'alt missing, not erroring'}
-        loading='lazy'
-      />
+    <img
+      {...rest}
+      className={`Image ${(rest.className !== undefined) ? rest.className : ""}`}
+      alt={(rest.alt !== undefined) ? rest.alt : 'alt missing, not erroring'}
+      loading='lazy'
+    />
   );
 };
 

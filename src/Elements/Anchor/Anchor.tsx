@@ -1,4 +1,4 @@
-import React, { AnchorHTMLAttributes } from 'react';
+import React, { AnchorHTMLAttributes, useEffect } from 'react';
 import './Anchor.css';
 
 /**
@@ -20,7 +20,7 @@ export const Anchor: React.FC<AnchorProps> = ({
   children,
   href,
   ...rest
-}) => {
+}: AnchorProps): React.ReactElement => {
   return (
     <a {...rest} href={href} className={`Anchor ${(rest.className !== undefined) ? rest.className : ""}`}>{children}</a>
   );
