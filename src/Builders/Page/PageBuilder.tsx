@@ -14,9 +14,7 @@ interface PageProps extends HTMLAttributes<HTMLDivElement> {
 export const PageBuilder: React.FC<PageProps> = ({
   children,
   ...rest
-
 }) => {
-  console.log("Pagebuilder building.");
   return (
     <Grid {...rest} className={`pagebuilder ${rest.className}`}>
       { rest.header && <GridItem className="header">{rest.header}</GridItem> }
