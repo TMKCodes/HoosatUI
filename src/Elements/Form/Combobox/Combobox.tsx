@@ -87,7 +87,7 @@ export const Combobox: React.FC<ComboboxProps> = ({
   } 
 
   return (
-    <div {...rest} className={`Container ${(rest.className !== undefined) ? rest.className : ""}`}>
+    <div {...rest} className={`Container${(rest.className !== undefined) ? " " + rest.className : ""}`}>
       <Input className="InputOverwrite"
         label={ (rest !== undefined && rest.label !== undefined) ? rest.label : "" } 
         data-testid="combobox-input" id={(rest !== undefined && rest.id !== undefined) ? rest.id : ""}

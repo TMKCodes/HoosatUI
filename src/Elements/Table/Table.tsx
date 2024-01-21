@@ -31,7 +31,7 @@ export const Table: React.FC<TableProps> = ({
   ...rest
 }) => {
   return (
-    <table {...rest} className={`Table ${(rest.className !== undefined) ? rest.className : ""}`}>{ children }</table>
+    <table {...rest} className={`Table${(rest.className !== undefined) ? " " + rest.className : ""}`}>{ children }</table>
   );
 }
 
@@ -40,7 +40,7 @@ export const THead: React.FC<THeadProps> = ({
   ...rest
 }) => {
   return (
-    <thead {...rest} className={`THead ${(rest.className !== undefined) ? rest.className : ""}`}>{children}</thead>
+    <thead {...rest} className={`THead${(rest.className !== undefined) ? " " + rest.className : ""}`}>{children}</thead>
   )
 }
 
@@ -49,7 +49,7 @@ export const Th: React.FC<ThProps> = ({
   ...rest
 }) => {
   return (
-    <th {...rest} className={`Th ${(rest.className !== undefined) ? rest.className : ""}`}>{children}</th>
+    <th {...rest} className={`Th${(rest.className !== undefined) ? " " + rest.className : ""}`}>{children}</th>
   )
 }
 
@@ -58,7 +58,7 @@ export const TBody: React.FC<TBodyProps> = ({
   ...rest
 }) => {
   return (
-    <tbody {...rest} className={`TBody ${(rest.className !== undefined) ? rest.className : ""}`}>{children}</tbody>
+    <tbody {...rest} className={`TBody${(rest.className !== undefined) ? " " + rest.className : ""}`}>{children}</tbody>
   )
 }
 
@@ -67,7 +67,7 @@ export const Tr: React.FC<TrProps> = ({
   ...rest
 }) => {
   return (
-    <tr {...rest} className={`Tr ${(rest.className !== undefined) ? rest.className : ""}`}>{children}</tr>
+    <tr {...rest} className={`Tr${(rest.className !== undefined) ? " " + rest.className : ""}`}>{children}</tr>
   )
 }
 
@@ -76,6 +76,6 @@ export const Td: React.FC<TdProps> = ({
   ...rest
 }) => {
   return (
-    <td {...rest} className={`Td ${(rest.className !== undefined) ? rest.className : ""}`}>{children}</td>
+    <td {...rest} className={`Td${(rest.className !== undefined) ? " " + rest.className : ""}`}>{children}</td>
   )
 }

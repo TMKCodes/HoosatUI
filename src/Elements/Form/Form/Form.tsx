@@ -24,7 +24,7 @@ export const Form: React.FC<FormProps> = ({
   ...rest
 }) => {
   return (
-    <form {...rest} className={`Form ${variant} ${(rest.className !== undefined) ? rest.className : ""}`}>
+    <form {...rest} className={`Form ${variant}${(rest.className !== undefined) ? " " + rest.className : ""}`}>
       {children}
     </form>
   );

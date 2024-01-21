@@ -22,7 +22,7 @@ export const Option: React.FC<OptionProps> = ({
   return (
     <option
       {...rest}
-      className={`Option ${(rest.className !== undefined) ? rest.className : ""}`}
+      className={`Option${(rest.className !== undefined) ? " " + rest.className : ""}`}
       >
       {children}
     </option>

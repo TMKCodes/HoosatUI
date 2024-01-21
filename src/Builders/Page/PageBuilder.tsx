@@ -16,6 +16,7 @@ export const PageBuilder: React.FC<PageProps> = ({
   ...rest
 
 }) => {
+  console.log("Pagebuilder building.");
   return (
     <Grid {...rest} className={`pagebuilder ${rest.className}`}>
       { rest.header && <GridItem className="header">{rest.header}</GridItem> }

@@ -27,7 +27,7 @@ export const Flex: React.FC<FlexProps> = ({
   ...rest
 }: FlexProps): React.ReactElement => {
   return (
-    <div {...rest} className={`Flex ${(rest.className !== undefined) ? rest.className : ""}`} >{ children }</div>
+    <div {...rest} className={`Flex${(rest.className !== undefined) ? " " + rest.className : ""}`} >{ children }</div>
   );
 }
 
@@ -41,6 +41,6 @@ export const FlexItem: React.FC<FlexItemProps> = ({
   ...rest
 }: FlexItemProps): React.ReactElement => {
   return (
-    <div {...rest} className={`FlexItem ${(rest.className !== undefined) ? rest.className : ""}`} >{ children }</div>
+    <div {...rest} className={`FlexItem${(rest.className !== undefined) ? " " + rest.className : ""}`} >{ children }</div>
   );
 }

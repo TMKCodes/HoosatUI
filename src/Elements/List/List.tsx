@@ -34,10 +34,10 @@ export const List: React.FC<ListProps> = ({
   return (
     <>
       { (marker === "ol") 
-        ? <ol {...rest} className={`List ${(rest.className !== undefined) ? rest.className : ""}`} style={{ listStyleType: "disc", ...rest.style }}>{ children }</ol>
+        ? <ol {...rest} className={`List${(rest.className !== undefined) ? " " + rest.className : ""}`} style={{ listStyleType: "disc", ...rest.style }}>{ children }</ol>
         : (marker === "ul") 
-        ? <ul {...rest} className={`List ${(rest.className !== undefined) ? rest.className : ""}`} style={{ listStyleType: "number", ...rest.style }}>{ children }</ul>
-        : <ul {...rest} className={`List ${(rest.className !== undefined) ? rest.className : ""}`} style={{ listStyleType: "none", ...rest.style }}>{ children }</ul>
+        ? <ul {...rest} className={`List${(rest.className !== undefined) ? " " + rest.className : ""}`} style={{ listStyleType: "number", ...rest.style }}>{ children }</ul>
+        : <ul {...rest} className={`List${(rest.className !== undefined) ? " " + rest.className : ""}`} style={{ listStyleType: "none", ...rest.style }}>{ children }</ul>
       }
     </>
   );
@@ -53,6 +53,6 @@ export const ListItem: React.FC<ListItemProps> = ({
   ...rest
 }) => {
   return (
-    <li {...rest} className={`ListItem ${(rest.className !== undefined) ? rest.className : ""}`}>{ children }</li>
+    <li {...rest} className={`ListItem${(rest.className !== undefined) ? " " + rest.className : ""}`}>{ children }</li>
   );
 }

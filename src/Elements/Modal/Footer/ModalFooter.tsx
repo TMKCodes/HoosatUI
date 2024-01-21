@@ -12,7 +12,7 @@ export const ModalFooter: React.FC<ModalFooterProps> = ({
   ...rest
 }) => {
   return (
-    <Flex  {...rest} className={`ModalFooter ${(rest.className !== undefined) ? rest.className : ""}`}>
+    <Flex  {...rest} className={`ModalFooter${(rest.className !== undefined) ? " " + rest.className : ""}`}>
       {children}
     </Flex>
   );

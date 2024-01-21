@@ -29,7 +29,7 @@ export const Grid: React.FC<GridProps> = ({
   ...rest
 }: GridProps): React.ReactElement => {
   return (
-    <div {...rest} className={`Grid ${(rest.className !== undefined) ? rest.className : ""}`} >{ children }</div>
+    <div {...rest} className={`Grid${(rest.className !== undefined) ? " " + rest.className : ""}`} >{ children }</div>
   );
 }
 
@@ -43,6 +43,6 @@ export const GridItem: React.FC<GridItemProps> = ({
   ...rest
 }: GridItemProps): React.ReactElement => {
   return (
-    <div {...rest} className={`GridItem ${(rest.className !== undefined) ? rest.className : ""}`} >{ children }</div>
+    <div {...rest} className={`GridItem${(rest.className !== undefined) ? " " + rest.className : ""}`} >{ children }</div>
   );
 }

@@ -22,6 +22,6 @@ export const Anchor: React.FC<AnchorProps> = ({
   ...rest
 }: AnchorProps): React.ReactElement => {
   return (
-    <a {...rest} href={href} className={`Anchor ${(rest.className !== undefined) ? rest.className : ""}`}>{children}</a>
+    <a {...rest} href={href} className={`Anchor${(rest.className !== undefined) ? " " + rest.className : ""}`}>{children}</a>
   );
 }

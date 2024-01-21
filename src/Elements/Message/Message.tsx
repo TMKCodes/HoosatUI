@@ -14,7 +14,7 @@ export const Message: React.FC<MessageType> = ({
   ...rest
 }) => {
   return (
-    <Grid {...rest} className={`Message MessageType${rest.type} ${(rest.className !== undefined) ? rest.className : ""}`}>
+    <Grid {...rest} className={`Message MessageType${rest.type}${(rest.className !== undefined) ? " " + rest.className : ""}`}>
       <Paragraph>{rest.message}</Paragraph>
     </Grid>
   );

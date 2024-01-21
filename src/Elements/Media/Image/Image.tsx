@@ -31,7 +31,7 @@ export const Image: React.FC<ImageProps> = ({
   return (
     <img
       {...rest}
-      className={`Image ${(rest.className !== undefined) ? rest.className : ""}`}
+      className={`Image${(rest.className !== undefined) ? " " + rest.className : ""}`}
       alt={(rest.alt !== undefined) ? rest.alt : 'alt missing, not erroring'}
       loading='lazy'
     />
@@ -48,6 +48,6 @@ export const ImageMap: React.FC<ImageMapProps> = ({
   ...rest
 }) => {
   return (
-    <map {...rest} className={`Map ${(rest.className !== undefined) ? rest.className : ""}`}>{ children }</map>
+    <map {...rest} className={`Map${(rest.className !== undefined) ? " " + rest.className : ""}`}>{ children }</map>
   );
 }

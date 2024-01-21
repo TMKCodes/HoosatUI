@@ -20,6 +20,6 @@ export const Label: React.FC<LabelProps> = ({
   ...rest
 }) => {
   return (
-    <label {...rest} className={`Label ${(rest.className !== undefined) ? rest.className : ""}`}>{children}</label>
+    <label {...rest} className={`Label${(rest.className !== undefined) ? " " + rest.className : ""}`}>{children}</label>
   );
 }

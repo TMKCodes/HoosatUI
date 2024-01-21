@@ -20,6 +20,6 @@ export const Area: React.FC<AreaProps> = ({
   ...rest
 }) => {
   return (
-    <area {...rest} className={`Area ${(rest.className !== undefined) ? rest.className : ""}`} alt={(rest.alt !== undefined) ? rest.alt : "Alternative area"}/>
+    <area {...rest} className={`Area${(rest.className !== undefined) ? " " + rest.className : ""}`} alt={(rest.alt !== undefined) ? rest.alt : "Alternative area"}/>
   );
 }
