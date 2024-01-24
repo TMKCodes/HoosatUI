@@ -15,9 +15,12 @@ interface FormProps extends FormHTMLAttributes<HTMLFormElement> {
   onSubmit(value: React.BaseSyntheticEvent): void,
 }
 
-
 export const FormBuilder: React.FC<FormProps> = ({
   children,
+  submitbuttontext, 
+  submitbuttonid, 
+  header,
+  inputs, 
   ...rest
 }) => {
 
@@ -49,13 +52,13 @@ export const FormBuilder: React.FC<FormProps> = ({
   return (
     <Form id={rest.id} {...rest} onSubmit={(e) => { e.preventDefault(); rest.onSubmit(e); } }  >
         <Grid>
-          {rest.header !== undefined && <Heading variant="h2">{rest.header}</Heading> }
-          { rest.inputs.map((input) => (
+          { header !== undefined && <Heading variant="h2">{header}</Heading> }
+          { inputs.map((input) => (
             getElementByInput(input) 
           ))}
           { children }
-          <Button id={rest.submitbuttonid} style={{ width: "100%" }} onClick={(e) => { e.preventDefault(); rest.onSubmit(e); }}>
-            {(rest.submitbuttontext !== undefined) ? rest.submitbuttontext : "Send" }
+          <Button id={submitbuttonid} style={{ width: "100%" }} onClick={(e) => { e.preventDefault(); rest.onSubmit(e); }}>
+            {( submitbuttontext !== undefined) ? submitbuttontext : "Send" }
           </Button>
         </Grid>
      </Form>

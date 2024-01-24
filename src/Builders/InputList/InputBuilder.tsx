@@ -1,26 +1,24 @@
 import React, { HTMLAttributes, HTMLInputTypeAttribute } from "react";
 import { Input } from '../../Elements';
 
-interface InputProps extends HTMLAttributes<HTMLInputElement>{
-  placeholder: string | undefined;
-  label: string | undefined;
-  type: HTMLInputTypeAttribute | undefined;
-  value: string | number | readonly string[] | undefined;
+interface InputProps {
+  [key: string]: any;
+}
+
+interface InputBuilderProps extends HTMLAttributes<HTMLInputElement>{
+  key: string;
+  inputs: InputProps[];
 }
 
 
-export const InputBuilder: React.FC<{ inputs: InputProps[]}> = (data) => {
-
+export const InputBuilder: React.FC<InputBuilderProps> = ({
+  key,
+  inputs,
+}) => {
   return (
     <>
-      { (data.inputs !== undefined) && data.inputs.map((input) => (
-        <Input key={input.id}
-          id={input.id}
-          label={input.label} 
-          type={input.type}
-          placeholder={input.placeholder}
-          value={input.value}
-          onChange={input.onChange}/>
+      { (inputs !== undefined) && inputs.map((input, index) => (
+        <Input key={"input-" + key + "-" + index} {...input}/>
       ))}
     </>
   );

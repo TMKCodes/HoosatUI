@@ -16,7 +16,7 @@ export const PageBuilder: React.FC<PageProps> = ({
   ...rest
 }) => {
   return (
-    <Grid {...rest} className={`pagebuilder ${rest.className}`}>
+    <Grid {...rest} className={`pagebuilder${rest.className !== undefined ? " " + rest.className : ""}`}>
       { rest.header && <GridItem className="header">{rest.header}</GridItem> }
       { rest.navigation && <GridItem className="navigation">{rest.navigation}</GridItem> }
       { rest.body && <GridItem className="content">{rest.body}</GridItem> }

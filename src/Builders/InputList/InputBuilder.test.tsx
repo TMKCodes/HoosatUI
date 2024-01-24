@@ -25,7 +25,7 @@ const testInputs = [
 describe('InputList', () => {
   it('renders inputs correctly', () => {
     const { getByLabelText } = render(
-      <InputBuilder inputs={testInputs} />
+      <InputBuilder key="test" inputs={testInputs} />
     );
 
     expect(getByLabelText('Label 1')).toBeInTheDocument();
@@ -34,7 +34,7 @@ describe('InputList', () => {
 
   it('calls onChange correctly', () => {
     const { getByLabelText } = render(
-      <InputBuilder inputs={testInputs} />
+      <InputBuilder key="test" inputs={testInputs} />
     );
 
     const input1 = getByLabelText('Label 1') as HTMLInputElement;
