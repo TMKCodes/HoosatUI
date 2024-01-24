@@ -12,16 +12,20 @@ interface PageProps extends HTMLAttributes<HTMLDivElement> {
 }
 
 export const PageBuilder: React.FC<PageProps> = ({
-  children,
+  header,
+  navigation,
+  body,
+  sidebar,
+  footer,
   ...rest
 }) => {
   return (
     <Grid {...rest} className={`pagebuilder${rest.className !== undefined ? " " + rest.className : ""}`}>
-      { rest.header && <GridItem className="header">{rest.header}</GridItem> }
-      { rest.navigation && <GridItem className="navigation">{rest.navigation}</GridItem> }
-      { rest.body && <GridItem className="content">{rest.body}</GridItem> }
-      { rest.sidebar && <GridItem className="sidebar">{rest.sidebar}</GridItem> }
-      { rest.footer && <GridItem className="footer">{rest.footer}</GridItem> }
+      { header && <GridItem className="header">{ header }</GridItem> }
+      { navigation && <GridItem className="navigation">{ navigation }</GridItem> }
+      { body && <GridItem className="content">{ body }</GridItem> }
+      { sidebar && <GridItem className="sidebar">{ sidebar }</GridItem> }
+      { footer && <GridItem className="footer">{ footer }</GridItem> }
     </Grid>
   );
 };
