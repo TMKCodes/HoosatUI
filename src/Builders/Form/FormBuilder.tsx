@@ -24,26 +24,27 @@ export const FormBuilder: React.FC<FormProps> = ({
   ...rest
 }) => {
 
-  const getElementByInput: any = (input: FormInputProps) => {
-    switch(input.itype) {
+  const getElementByInput = (input: FormInputProps) => {
+    const { itype, ...inputProps } = input;
+    switch(itype) {
       case "container": 
-        return <div key={`${input.id}`}{...input}>
-        {input.inputs.map((input: any) => (
+        return <div key={`${inputProps.id}`}{...inputProps}>
+        {inputProps.inputs.map((input: FormInputProps) => (
           getElementByInput(input)
         ))}
         </div>
       case "input":
-        return <Input key={`${input.id}`} onChange={input.onChange} {...input} />
+        return <Input key={`${inputProps.key}`} onChange={inputProps.onChange} {...inputProps} />
       case "select":
-        return <Select key={`${input.id}`} onChange={input.onChange} {...input} />
+        return <Select key={`${inputProps.key}`} onChange={inputProps.onChange} {...inputProps} />
       case "combobox":
-        return <Combobox key={`${input.id}`} options={input.options} {...input} />
+        return <Combobox key={`${inputProps.key}`} options={inputProps.options} {...inputProps} />
       case "button":
-        return <Button key={`${input.id}`} {...input}>{input.children}</Button>
+        return <Button key={`${inputProps.key}`} {...inputProps}>{inputProps.children}</Button>
       case "textarea":
-        return <Textarea key={`${input.id}`} {...input}>{input.children}</Textarea>
+        return <Textarea key={`${inputProps.key}`} {...inputProps}>{inputProps.children}</Textarea>
       case "message": 
-        return <Message key={`${input.id}`} message={input.message} type={input.type} {...input}></Message>
+        return <Message key={`${inputProps.key}`} message={inputProps.message} type={inputProps.type} {...inputProps}></Message>
       default:
         return <></>
     }

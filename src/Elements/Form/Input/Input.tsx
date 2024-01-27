@@ -23,6 +23,7 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
 export const Input: React.FC<InputProps> = ({
   children,
   variant = 'primary',
+  label,
   ...rest
 }: InputProps): JSX.Element => {
   if (rest.type === "checkbox") {
@@ -30,15 +31,15 @@ export const Input: React.FC<InputProps> = ({
       <div className="CheckboxContainer">
         <input
           {...rest}
-          id={(rest.id !== undefined) ? rest.id : rest.label }
+          id={(rest.id !== undefined) ? rest.id : label }
           className={`Checkbox ${variant}${(rest.className !== undefined) ? " " + rest.className : ""}`}
           style={{...rest.style}}
           >
           {children}
         </input>
-        { (rest.label !== undefined) &&
-          <label htmlFor={(rest.id !== undefined) ? rest.id : rest.label} className={`CheckboxLabel`}>
-            {rest.label}
+        { (label !== undefined) &&
+          <label htmlFor={(rest.id !== undefined) ? rest.id : label} className={`CheckboxLabel`}>
+            {label}
           </label>
         }
       </div>
@@ -46,14 +47,14 @@ export const Input: React.FC<InputProps> = ({
   } else {
     return (
       <>
-        { (rest.label !== undefined) &&
-          <label htmlFor={(rest.id !== undefined) ? rest.id : rest.label} className={`InputLabel`}>
-            {rest.label}
+        { (label !== undefined) &&
+          <label htmlFor={(rest.id !== undefined) ? rest.id : label} className={`InputLabel`}>
+            {label}
           </label>
         }
         <input
           {...rest}
-          id={(rest.id !== undefined) ? rest.id : rest.label }
+          id={(rest.id !== undefined) ? rest.id : label }
           className={`Input ${variant}${(rest.className !== undefined) ? " " + rest.className : ""}`}
           style={{...rest.style}}
           >

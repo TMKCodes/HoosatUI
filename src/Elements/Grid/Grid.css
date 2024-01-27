@@ -3,8 +3,6 @@
 .Grid {
   display: grid;
   gap: 1rem;
-  justify-content: auto;
-  align-content: auto;
   grid-auto-flow: dense;
   grid-template-areas: none;
   grid-template-columns: auto;

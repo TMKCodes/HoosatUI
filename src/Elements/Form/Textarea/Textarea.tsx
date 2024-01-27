@@ -12,6 +12,7 @@ interface TextareaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
   variant?: 'primary' | 'secondary';
   id?: string,
   label?: string
+  type?: string
 }
 
 /**
@@ -22,18 +23,20 @@ interface TextareaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
 export const Textarea: React.FC<TextareaProps> = ({
   children,
   variant = 'primary',
+  label,
+  type,
   ...rest
 }) => {
   return (
     <>
-      { (rest.label !== undefined) &&
-        <label htmlFor={(rest.id !== undefined) ? rest.id : rest.label} className={`TextareaLabel`}>
-          {rest.label}
+      { (label !== undefined) &&
+        <label htmlFor={(rest.id !== undefined) ? rest.id : label} className={`TextareaLabel`}>
+          {label}
         </label>
       }
       <textarea
         {...rest}
-        id={(rest.id !== undefined) ? rest.id : rest.label }
+        id={(rest.id !== undefined) ? rest.id : label }
         className={`Textarea ${variant}${(rest.className !== undefined) ? " " + rest.className : ""}`}>
         {children}
       </textarea>
