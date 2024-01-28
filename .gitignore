@@ -111,3 +111,4 @@ coverage/
 build/
 node_modules/
 src/_theme.scss
+src/Icons/icons

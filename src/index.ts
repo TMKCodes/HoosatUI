@@ -6,13 +6,8 @@ import {
 } from './Builders';
 
 import {
-  Markdown
-} from './Markdown/Markdown';
-
-import {
-  Icon,
-  iconNames
-} from './Icons/Icons';
+  DynamicIcon,
+} from './Icons/DynamicIcon';
 
 import {
   ImageViewer
@@ -54,6 +49,7 @@ import {
   ModalFooter, 
   ModalHeader
 } from './Elements';
+import { Icon, iconNames } from './Icons/Icon';
 
 export {
   Message,
@@ -96,9 +92,9 @@ export {
   InputBuilder,
   PageBuilder,
 
+  DynamicIcon,
   Icon,
   iconNames,
 
-  Markdown,
   ImageViewer,
 }

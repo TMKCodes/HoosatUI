@@ -1,6 +1,6 @@
 import React, { InputHTMLAttributes, useState } from "react";
 import { Grid, Input, List, ListItem } from "../..";
-import { iconNames, Icon } from "../../../Icons/Icons";
+import { iconNames, Icon } from "../../../Icons/Icon";
 
 import './Combobox.css';
 

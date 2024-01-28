@@ -8,7 +8,7 @@ interface IconProps {
 
 
 export const Icon: React.FC<IconProps> = ({ name, className, style }) => {
-  const icon = Icons.find((icon) => icon.name === name)!;
+  const icon = IconsData.find((icon) => icon.name === name)!;
   return (
     <svg
       className={className}
@@ -324,7 +324,7 @@ export const iconNames = [
   "login"
 ];
 
-export const Icons = [
+export const IconsData = [
   {
     "name": "add-outline",
     "filename": "add-outline.svg",

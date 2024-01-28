@@ -24,27 +24,27 @@ export const FormBuilder: React.FC<FormProps> = ({
   ...rest
 }) => {
 
-  const getElementByInput = (input: FormInputProps) => {
+  const getElementByInput = (input: FormInputProps, key: number) => {
     const { itype, ...inputProps } = input;
     switch(itype) {
       case "container": 
-        return <div key={`${inputProps.id}`}{...inputProps}>
-        {inputProps.inputs.map((input: FormInputProps) => (
-          getElementByInput(input)
+        return <div key={`${key}`}{...inputProps}>
+        {inputProps.inputs.map((input: FormInputProps, index: number) => (
+          getElementByInput(input,  key * index)
         ))}
         </div>
       case "input":
-        return <Input key={`${inputProps.key}`} onChange={inputProps.onChange} {...inputProps} />
+        return <Input key={`${key}`} onChange={inputProps.onChange} {...inputProps} />
       case "select":
-        return <Select key={`${inputProps.key}`} onChange={inputProps.onChange} {...inputProps} />
+        return <Select key={`${key}`} onChange={inputProps.onChange} {...inputProps} />
       case "combobox":
-        return <Combobox key={`${inputProps.key}`} options={inputProps.options} {...inputProps} />
+        return <Combobox key={`${key}`} options={inputProps.options} {...inputProps} />
       case "button":
-        return <Button key={`${inputProps.key}`} {...inputProps}>{inputProps.children}</Button>
+        return <Button key={`${key}`} {...inputProps}>{inputProps.children}</Button>
       case "textarea":
-        return <Textarea key={`${inputProps.key}`} {...inputProps}>{inputProps.children}</Textarea>
+        return <Textarea key={`${key}`} {...inputProps}>{inputProps.children}</Textarea>
       case "message": 
-        return <Message key={`${inputProps.key}`} message={inputProps.message} type={inputProps.type} {...inputProps}></Message>
+        return <Message key={`${key}`} message={inputProps.message} type={inputProps.type} {...inputProps}></Message>
       default:
         return <></>
     }
@@ -54,8 +54,8 @@ export const FormBuilder: React.FC<FormProps> = ({
     <Form id={rest.id} {...rest} onSubmit={(e) => { e.preventDefault(); rest.onSubmit(e); } }  >
         <Grid>
           { header !== undefined && <Heading variant="h2">{header}</Heading> }
-          { inputs.map((input) => (
-            getElementByInput(input) 
+          { inputs.map((input, index) => (
+            getElementByInput(input, index) 
           ))}
           { children }
           <Button id={submitbuttonid} style={{ width: "100%" }} onClick={(e) => { e.preventDefault(); rest.onSubmit(e); }}>
