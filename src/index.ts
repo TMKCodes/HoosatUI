@@ -5,9 +5,6 @@ import {
   PageBuilder
 } from './Builders';
 
-import {
-  DynamicIcon,
-} from './Icons/DynamicIcon';
 
 import {
   ImageViewer
@@ -92,7 +89,6 @@ export {
   InputBuilder,
   PageBuilder,
 
-  DynamicIcon,
   Icon,
   iconNames,
 
