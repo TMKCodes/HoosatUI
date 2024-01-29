@@ -39,7 +39,8 @@ import {
   ModalHeader,
   Icon,
   iconNames,
-  ImageViewer
+  ImageViewer,
+  Markdown
 } from './src/';
 
 export {
@@ -86,5 +87,6 @@ export {
   Icon,
   iconNames,
 
-  ImageViewer
+  ImageViewer,
+  Markdown
 }

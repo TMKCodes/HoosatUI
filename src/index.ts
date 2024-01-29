@@ -44,9 +44,10 @@ import {
   Modal, 
   ModalBody, 
   ModalFooter, 
-  ModalHeader
+  ModalHeader,
 } from './Elements';
 import { Icon, iconNames } from './Icons/Icon';
+import { Markdown } from './Markdown/Markdown';
 
 export {
   Message,
@@ -93,4 +94,5 @@ export {
   iconNames,
 
   ImageViewer,
+  Markdown
 }
