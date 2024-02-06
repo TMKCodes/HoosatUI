@@ -1,4 +1,4 @@
-import React, { TableHTMLAttributes } from "react";
+import React, { ReactNode, TableHTMLAttributes } from "react";
 import { Table, TBody, Td, Th, THead, Tr } from "../../Elements";
 
 interface TableInputProps extends TableHTMLAttributes<HTMLTableRowElement> {
@@ -8,22 +8,23 @@ interface TableInputProps extends TableHTMLAttributes<HTMLTableRowElement> {
 }
 
 interface TableProps extends TableHTMLAttributes<HTMLTableElement> {
-  headers: string[],
+  headers: string[] | ReactNode[],
   rows: TableInputProps[],
 }
 
 
 export const TableBuilder: React.FC<TableProps> = ({
   children,
+  className,
   ...rest
 }) => {
 
 
   return (
-    <Table>
+    <Table className={className}>
       <THead>
         <Tr>
-          { rest.headers.map(header => <Th key={"th-" + header}>{header}</Th>) }
+          { rest.headers.map((header, key) => <Th key={"th-" + key}>{header}</Th>) }
         </Tr>
       </THead>
       <TBody>
